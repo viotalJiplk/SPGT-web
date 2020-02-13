@@ -1,2 +1,2 @@
 # SPGT-web
- web-SPGT
+github repository for web-SPGT
