@@ -1,0 +1,11 @@
+@use 'variables' as v;
+@use 'navbar';
+
+html{
+    font-size: 130%;
+}
+
+body{
+    background-color: v.$colortest;
+    margin: 0;
+}
