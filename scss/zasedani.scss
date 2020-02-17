@@ -1,0 +1,93 @@
+@use 'variables' as v;
+@use 'navbar';
+
+html{
+    font-size: 130%;
+}
+
+@media screen and (max-width: 900px) {
+    html{
+        font-size: 200%;
+    }
+}
+
+body{
+    background-color: v.$colortest;
+    margin: 0;
+}
+
+.mainContent{
+    width: 85vw;
+    margin: 1rem auto 1rem;
+    overflow: hidden;
+}
+
+.zasedani{
+    width: 90%;
+    margin: 0 auto 0.5em;
+    overflow: hidden;
+    background-color: snow;
+    //border-bottom: 0.3em solid black;
+    box-shadow: 0.05em 0.2em 0.3em rgba(0, 0, 0, .5);
+
+    .zasedaniTopWrap{
+        overflow: hidden;
+        background-color: rgb(211, 211, 211);
+    }
+
+    .zasedaniTop{
+        font-size: 1.5rem;
+        margin: 0.5em 0.5em 0.4em 0.5em;
+
+        .dropdownButtonWrap{
+            float: right;
+            cursor: pointer;
+            width: 1em;
+            text-align: center;
+        }
+
+        .dropdownButton{
+            border: solid black;
+            border-width: 0 0.12em 0.12em 0;
+            display: inline-block;
+            padding: 3px;
+
+            height: 0.15em;
+            width: 0.15em;
+
+            transform: rotate(45deg);
+            margin-bottom: 0.11em;
+        }
+    }
+
+    .zasedaniCont{
+        display: none;
+        overflow: hidden;
+        margin: 0 1em 1em;
+
+        h4{
+            margin-top: 0.2em;
+        }
+    }
+
+    .checkbox{
+        display: none;
+
+        &:checked + label + div{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-between;
+
+            .program, .downloads, .statistiky{
+                margin: 1em 0.7em 0;
+            }
+        }
+
+        &:checked + label .dropdownButton{
+            transform: rotate(-135deg);
+        }
+    }
+
+}
+
