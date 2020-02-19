@@ -1,3 +1,8 @@
+<?php
+    include_once("php/dbio.php");
+
+    dbio("SELECT * FROM stdlogin", 1);
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,3 +16,5 @@
         </form>
     </body>
 </html>
+<?php
+?>
