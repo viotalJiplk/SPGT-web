@@ -15,7 +15,12 @@
     </body>
 </html>
 <?php
-    dbio("INSERT INTO stdlogin (username, password)VALUES ('$_POST[username]', '$_POST[password]');", 0);
+    try{
+        dbio("INSERT INTO stdlogin (username, password)VALUES ('$_POST[username]', '$_POST[password]');", 0);
+    }catch(InputException $e){
+        echo $e->getMessage();
+    }
     $result = dbio("SELECT * FROM stdlogin", 1);
-    var_dump($result);
+    echo json_encode($result);
+
 ?>

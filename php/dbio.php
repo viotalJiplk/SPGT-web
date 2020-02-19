@@ -33,8 +33,12 @@ function dbio(string $sql, int $io){
             $conn = null;
         }
     }catch(PDOException $e) {                                               //zpracování výjimky databáze
-        $ExceptionHandler = new ExceptionHandlerclass;
-        $ExceptionHandler->SetException("PDOException", $e->getMessage());
+        if($e->errorInfo["1"] == 1062){
+            throw new InputException("Username not UNIQUE");
+        }else{
+            $ExceptionHandler = new ExceptionHandlerclass;
+            $ExceptionHandler->SetException("PDOException", $e->getMessage());
+        }
         return ($ExceptionHandler);
     }catch(AttrException $e){                                               //zpracování výjimky atributů spojení s databází 
         $ExceptionHandler = new ExceptionHandlerclass;
