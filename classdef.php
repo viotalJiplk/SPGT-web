@@ -10,7 +10,12 @@ if(!class_exists("AttrException")){
     class AttrException extends Exception{
     }
 }
-    
+if(!class_exists("dbIOException")){
+        
+    class dbIOException extends Exception{
+    }
+}
+
 if(!class_exists("ExceptionHandlerclass")){
     class ExceptionHandlerclass{
         public $info;

@@ -33,21 +33,21 @@ function dbio(string $sql, int $io){
             $conn = null;
         }
     }catch(PDOException $e) {                                               //zpracování výjimky databáze
-        if($e->errorInfo["1"] == 1062){
+        if($e->errorInfo["1"] == 1062){                                     //username není unikátní
             throw new InputException("Username not UNIQUE");
         }else{
             $ExceptionHandler = new ExceptionHandlerclass;
             $ExceptionHandler->SetException("PDOException", $e->getMessage());
-        }
-        return ($ExceptionHandler);
+            throw new dbIOException("PDOexcepion");
+        };
     }catch(AttrException $e){                                               //zpracování výjimky atributů spojení s databází 
         $ExceptionHandler = new ExceptionHandlerclass;
         $ExceptionHandler->SetException("PDOAtrException", $e);
-        return ($ExceptionHandler);
+        throw new dbIOException("exception when setting attribute");
     }catch(Exception $e){                                                   //zpracování obecné výjimky
         $ExceptionHandler = new ExceptionHandlerclass;
         $ExceptionHandler->SetException("UnknownException", $e);
-        return ($ExceptionHandler);
+        throw new dbIOException("db general excepion");
     }
 }
 

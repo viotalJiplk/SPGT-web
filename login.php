@@ -17,8 +17,10 @@
 <?php
     try{
         dbio("INSERT INTO stdlogin (username, password)VALUES ('$_POST[username]', '$_POST[password]');", 0);
-    }catch(InputException $e){
+    }catch(InputException $e){                                              //username not Unique
         echo $e->getMessage();
+    }catch(dbIOException $e){                                               //some db exception
+        echo "system exception";
     }
     $result = dbio("SELECT * FROM stdlogin", 1);
     echo json_encode($result);
