@@ -5,13 +5,12 @@ include_once("classdef.php");
 function dbio(string $sql, int $io){
     try{
         $servername = "localhost";
-        $dbname = "d215865_spgtweb";
 
         $username = "a215865_spgtweb";
         $password = "QhcnpmhJ";
 
 
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        $conn = new PDO("mysql:host=$servername", $username, $password);
 
             //adding parmeters and testing return value
         if(!$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION)){    //PDO::ERRMODE_SILENT for not debug uses
