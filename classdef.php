@@ -10,11 +10,6 @@ if(!class_exists("AttrException")){
     class AttrException extends Exception{
     }
 }
-if(!class_exists("GameException")){
-        
-    class GameException extends Exception{
-    }
-}    
     
 if(!class_exists("ExceptionHandlerclass")){
     class ExceptionHandlerclass{

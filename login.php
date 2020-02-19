@@ -1,7 +1,5 @@
 <?php
     include_once("php/dbio.php");
-
-    dbio("SELECT * FROM stdlogin", 1);
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,4 +15,7 @@
     </body>
 </html>
 <?php
+    dbio("INSERT INTO stdlogin (username, password)VALUES ('$_POST[username]', '$_POST[password]');", 0);
+    $result = dbio("SELECT * FROM stdlogin", 1);
+    var_dump($result);
 ?>
