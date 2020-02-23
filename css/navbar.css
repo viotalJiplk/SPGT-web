@@ -6,6 +6,7 @@ body {
   z-index: 1000;
   position: -webkit-sticky;
   position: sticky;
+  top: 0;
   width: 100%;
   height: 4rem;
   display: -webkit-box;
@@ -72,7 +73,7 @@ body {
 
 @media screen and (max-aspect-ratio: 1/1) {
   .body {
-    margin-bottom: 0 0 4rem;
+    margin: 0 0 4rem;
   }
 
   .navWrap {
