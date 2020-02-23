@@ -7,7 +7,6 @@ html{
 
 body{
     background-color: v.$colortest;
-    margin: 0;
 }
 
 .titleBox{
@@ -23,7 +22,7 @@ body{
     background-size: cover;
 
     .titleBoxText{
-        font-size: 2em;
+        font-size: 2rem;
         color: rgb(202, 202, 202);
 
         text-align: center;

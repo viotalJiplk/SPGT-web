@@ -1,64 +1,78 @@
-nav {
+body {
+  margin: 0;
+}
+
+.navWrap {
+  z-index: 1000;
+  top: 0;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
-  background-color: blue;
-  font-size: 1.2rem;
+  width: 100%;
+  height: 4em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: 1;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #5c8ffd;
 }
-nav a {
-  display: block;
-  color: yellow;
+.navWrap .logo {
+  font-size: 2em;
   text-align: center;
-  text-decoration: none;
-  padding: 0.5em 0.5em;
 }
-nav a:hover, nav a:focus {
-  background-color: yellow;
-  color: blue;
+.navWrap nav {
+  height: 4em;
+  z-index: 1000;
 }
-nav div:hover, nav div:focus-within {
-  background-color: yellow;
-  color: blue;
-}
-nav div ul {
-  display: none;
-  position: absolute;
-  padding: 0;
-  min-width: 6em;
+.navWrap nav ul {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style: none;
-  z-index: 1;
-  top: 1.15em;
-  background-color: yellow;
 }
-nav div ul li {
-  float: none;
+.navWrap nav ul .BurgerButtonContent {
+  display: none;
+}
+.navWrap nav a {
+  width: 100%;
+  height: 100%;
+  color: black;
   text-decoration: none;
-  display: block;
-  text-align: left;
-}
-nav div ul li a {
-  color: blue;
-  background-color: yellow;
-}
-nav div ul li a:hover {
-  background-color: yellow;
-  color: blue;
-}
-nav div:hover ul {
-  display: block;
 }
 
+@media screen and (max-aspect-ratio: 1/1) {
+  body {
+    margin: 0 0 4em;
+  }
+
+  .navWrap {
+    position: static;
+  }
+
+  nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: cornflowerblue;
+  }
+}
 html {
   font-size: 130%;
 }
 
 body {
   background-color: khaki;
-  margin: 0;
 }
 
 .titleBox {
@@ -73,7 +87,7 @@ body {
   background-size: cover;
 }
 .titleBox .titleBoxText {
-  font-size: 2em;
+  font-size: 2rem;
   color: #cacaca;
   text-align: center;
   margin: 0;
