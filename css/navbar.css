@@ -83,9 +83,9 @@ body {
   display: none;
   cursor: pointer;
 }
-.navWrap nav .hamburgerButton .HBCheckboxLabel,
-.navWrap nav .hamburgerButton .HBCheckboxLabel > div {
-  height: 3rem;
+.navWrap nav .hamburgerButton .HBCheckboxLabel {
+  height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,13 +95,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe,
 .navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:before,
-.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:after,
-.navWrap nav .hamburgerButton .HBCheckboxLabel > div .HBStripe,
-.navWrap nav .hamburgerButton .HBCheckboxLabel > div .HBStripe:before,
-.navWrap nav .hamburgerButton .HBCheckboxLabel > div .HBStripe:after {
+.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:after {
   background: black;
   height: 0.4em;
   width: 3em;
@@ -109,26 +110,39 @@ body {
   position: relative;
 }
 .navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:before,
-.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:after,
-.navWrap nav .hamburgerButton .HBCheckboxLabel > div .HBStripe:before,
-.navWrap nav .hamburgerButton .HBCheckboxLabel > div .HBStripe:after {
+.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:after {
   content: "";
   position: absolute;
 }
-.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:before,
-.navWrap nav .hamburgerButton .HBCheckboxLabel > div .HBStripe:before {
+.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:before {
   top: 0.65em;
 }
-.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:after,
-.navWrap nav .hamburgerButton .HBCheckboxLabel > div .HBStripe:after {
+.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:after {
   bottom: 0.65em;
 }
-.navWrap nav .hamburgerButton .HBContent {
-  display: none;
-  background-color: rgba(0, 0, 0, 0.144);
+.navWrap nav .hamburgerButton .HBStripes {
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .navWrap nav .hamburgerButton .HBCheckbox {
   display: none;
+}
+.navWrap nav .hamburgerButton .HBCheckbox:checked + div {
+  display: block;
+}
+.navWrap nav .hamburgerButton .HBContent {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 6em;
+  width: 100vw;
+  height: 85vh;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 @media screen and (max-aspect-ratio: 1/1) {
@@ -147,7 +161,7 @@ body {
     display: block;
     width: 100%;
     height: 6rem;
-    background-color: cornflowerblue;
+    background-color: whitesmoke;
   }
   body .navWrap nav .navItem .navIcon {
     display: block;
@@ -157,12 +171,5 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-
-  .hamburgerButton:checked .HBContent {
-    display: block;
-    position: fixed;
-    bottom: 4em;
-    width: 90%;
   }
 }
