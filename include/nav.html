@@ -4,22 +4,38 @@
     </div>
 
     <nav>
-        <a href="/index.php">
+        <a href="/index.php" class="navItem">
+            <svg class="navIcon" xmlns="http://www.w3.org/2000/svg" height="3rem" viewBox="0 0 24 24" width="3rem">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
             <div>Domů</div>
         </a>
-        <a class="navItem">
-            <div href="/zasedani.php">Zasedání</div>
+        <a href="/zasedani.php" class="navItem">
+            <svg class="navIcon" xmlns="http://www.w3.org/2000/svg" height="3rem" viewBox="0 0 24 24" width="3rem">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+            <div>Zasedání</div>
         </a>
-        <a class="navItem">
-            <div href="/articles.php">Články</div>
+        <a href="/articles.php" class="navItem">
+            <svg class="navIcon" xmlns="http://www.w3.org/2000/svg" height="3rem" viewBox="0 0 24 24" width="3rem">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+            <div>Články</div>
         </a>
         
-        <div class="navItem hamburgerButton">
+        <div class="hamburgerButton">
             <label for="HBCheckbox" class="HBCheckboxLabel">
-                <div></div>
-                <div class="HBStripe"></div>
-                <div></div>
+                <div>
+                    <div></div>
+                    <div class="HBStripe"></div>
+                    <div></div>
+                </div>
             </label>
+
+            <div>Ostatní</div>
 
             <input id="HBCheckbox" class="HBCheckbox" type="checkbox">
 
@@ -44,8 +60,8 @@
             </div>
         </div>
 
-        <a class="navItem">
-            <div href="/login.php">Přihlásit se</div>
+        <a href="/login.php" class="navItem">
+            <div>Přihlásit se</div>
         </a>
     </nav>
 </div>
