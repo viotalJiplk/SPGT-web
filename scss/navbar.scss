@@ -49,19 +49,33 @@ body{
         .hamburgerButton {
             display: none;
 
-            .HBStripe,
-            .HBStripe:before,
-            .HBStripe:after {
-                background: black;
-                height: 0.2em;
-                width: 1em;
-                border-radius: 0.1em;
-                position: relative;
+            .HBCheckboxLabel{
+                height: 100%;
+                width: 100%;
+
+                .HBStripe,
+                .HBStripe:before,
+                .HBStripe:after {
+                    background: black;
+                    height: 0.2em;
+                    width: 1em;
+                    border-radius: 0.1em;
+                    position: relative;
+                }
+
+                .HBStripe:before,
+                .HBStripe:after {
+                    content: "";
+                }
             }
 
-            .HBStripe:before,
-            .HBStripe:after {
-                content: "";
+            .HBContent{
+                display: none;
+                background-color: rgba(0, 0, 0, 0.144);
+            }
+
+            .HBCheckbox{
+                display: none;
             }
         }
     }
@@ -69,8 +83,8 @@ body{
 
 //Mobile
 @media screen and (max-aspect-ratio: 1/1) {
-    .body{
-        margin: 0 0 4rem;
+    body{
+        margin: 0 0 4em;
     }
 
     .navWrap{
@@ -82,9 +96,16 @@ body{
         bottom: 0;
         width: 100%;
         background-color: cornflowerblue;
+    }
 
-        .hamburgerButton {
-            display: block;
-        }
+    nav .hamburgerButton{
+        display: block;
+    }
+
+    .hamburgerButton:checked .HBContent{
+        display: block;
+        position: fixed;
+        bottom: 4em;
+        width: 90%;
     }
 }

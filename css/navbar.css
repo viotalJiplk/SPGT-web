@@ -57,23 +57,34 @@ body {
 .navWrap nav .hamburgerButton {
   display: none;
 }
-.navWrap nav .hamburgerButton .HBStripe,
-.navWrap nav .hamburgerButton .HBStripe:before,
-.navWrap nav .hamburgerButton .HBStripe:after {
+.navWrap nav .hamburgerButton .HBCheckboxLabel {
+  height: 100%;
+  width: 100%;
+}
+.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe,
+.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:before,
+.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:after {
   background: black;
   height: 0.2em;
   width: 1em;
   border-radius: 0.1em;
   position: relative;
 }
-.navWrap nav .hamburgerButton .HBStripe:before,
-.navWrap nav .hamburgerButton .HBStripe:after {
+.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:before,
+.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:after {
   content: "";
+}
+.navWrap nav .hamburgerButton .HBContent {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.144);
+}
+.navWrap nav .hamburgerButton .HBCheckbox {
+  display: none;
 }
 
 @media screen and (max-aspect-ratio: 1/1) {
-  .body {
-    margin: 0 0 4rem;
+  body {
+    margin: 0 0 4em;
   }
 
   .navWrap {
@@ -86,7 +97,15 @@ body {
     width: 100%;
     background-color: cornflowerblue;
   }
-  body .navWrap nav .hamburgerButton {
+
+  nav .hamburgerButton {
     display: block;
+  }
+
+  .hamburgerButton:checked .HBContent {
+    display: block;
+    position: fixed;
+    bottom: 4em;
+    width: 90%;
   }
 }
