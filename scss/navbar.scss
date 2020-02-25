@@ -1,5 +1,9 @@
 @use 'variables' as v;
 
+html{
+    font-size: 130%;
+}
+
 body{
     margin: 0;
 }
@@ -67,7 +71,6 @@ body{
             float: left;
 
             display: none;
-            cursor: pointer;
 
             .HBCheckboxLabel{
                 height: 100%;
@@ -77,13 +80,14 @@ body{
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                cursor: pointer;
 
                 .HBStripe,
                 .HBStripe:before,
                 .HBStripe:after {
                     background: black;
                     height: 0.4em;
-                    width: 3em;
+                    width: 2.8em;
                     border-radius: 0.2em;
                     position: relative;
                 }
@@ -108,32 +112,38 @@ body{
                 display: flex;
                 align-items: center;
             }
-
-            .HBCheckbox{
-                display: none;
-            }
-
-            .HBCheckbox:checked + div{
-                display: block;
-            }
-
-            .HBContent{
-                display: none;
-
-                position: fixed;
-                left: 0;
-                bottom: 6em;
-                width: 100vw;
-                height: 85vh;
-
-                background-color: rgba(0, 0, 0, 0.7);
-            }
         }
+    }
+
+    .HBCheckbox{
+        display: none;
+    }
+
+    .HBCheckbox:checked + div{
+        display: block;
+    }
+    
+    .HBContent{
+        z-index: 990;
+
+        display: none;
+
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+
+        background-color: rgba(0, 0, 0, 0.7);
     }
 }
 
-//Mobile
+/*Mobile*/
 @media screen and (max-aspect-ratio: 1/1) {
+    html{
+        font-size: 4vw;
+    }
+
     body{
         margin: 0 0 6rem;
     }
@@ -148,9 +158,11 @@ body{
         position: fixed;
         bottom: 0;
         display: block;
-        width: 100%;
-        height: 6rem;
-        background-color: whitesmoke;
+        width: 90vw;
+        height: 5rem;
+        border-left: 6vw solid rgb(206, 206, 206);
+        border-right: 6vw solid rgb(206, 206, 206);
+        background-color: rgb(206, 206, 206);
 
         .navItem .navIcon{
             display: block;
