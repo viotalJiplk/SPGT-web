@@ -21,6 +21,15 @@ body{
     font-size: 1.5rem;
     background-color: rgb(77, 133, 255);
 
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
     .logo {
         font-size: 2rem;
         text-align: center;
@@ -34,9 +43,8 @@ body{
         align-items: center;
         min-width: 60%;
 
-        ul {
-            list-style: none;
-            padding: 0;
+        a{
+            color: black;
         }
 
         .navItem {
@@ -53,11 +61,6 @@ body{
             .navIcon{
                 display: none;
             }
-        }
-
-        a{
-            color: black;
-            text-decoration: none;
         }
 
         .hamburgerButton {
@@ -118,10 +121,6 @@ body{
     .HBCheckbox{
         display: none;
     }
-
-    .HBCheckbox:checked + div{
-        display: block;
-    }
     
     .HBContent{
         z-index: 990;
@@ -134,7 +133,20 @@ body{
         width: 100vw;
         height: 100vh;
 
-        background-color: rgba(0, 0, 0, 0.7);
+        text-align: center;
+        line-height: 2em;
+        overflow-y: auto;
+
+        background-color: rgba(0, 0, 0, 0.836);
+
+        a{
+            color: white;
+        }
+
+        ul{
+            margin: 5rem 0 7rem 0;
+        }
+
     }
 }
 
@@ -171,5 +183,9 @@ body{
 
     body .navWrap nav .hamburgerButton{
         display: flex;
+    }
+
+    .HBCheckbox:checked + div{
+        display: block;
     }
 }

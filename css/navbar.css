@@ -24,6 +24,13 @@ body {
   font-size: 1.5rem;
   background-color: #4d85ff;
 }
+.navWrap ul {
+  list-style: none;
+  padding: 0;
+}
+.navWrap a {
+  text-decoration: none;
+}
 .navWrap .logo {
   font-size: 2rem;
   text-align: center;
@@ -41,9 +48,8 @@ body {
           align-items: center;
   min-width: 60%;
 }
-.navWrap nav ul {
-  list-style: none;
-  padding: 0;
+.navWrap nav a {
+  color: black;
 }
 .navWrap nav .navItem {
   width: 25%;
@@ -65,10 +71,6 @@ body {
 }
 .navWrap nav .navItem .navIcon {
   display: none;
-}
-.navWrap nav a {
-  color: black;
-  text-decoration: none;
 }
 .navWrap nav .hamburgerButton {
   width: 25%;
@@ -136,9 +138,6 @@ body {
 .navWrap .HBCheckbox {
   display: none;
 }
-.navWrap .HBCheckbox:checked + div {
-  display: block;
-}
 .navWrap .HBContent {
   z-index: 990;
   display: none;
@@ -147,7 +146,16 @@ body {
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  line-height: 2em;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.836);
+}
+.navWrap .HBContent a {
+  color: white;
+}
+.navWrap .HBContent ul {
+  margin: 5rem 0 7rem 0;
 }
 
 /*Mobile*/
@@ -183,5 +191,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .HBCheckbox:checked + div {
+    display: block;
   }
 }
