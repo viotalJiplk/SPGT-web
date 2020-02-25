@@ -173,11 +173,11 @@ body{
         display: block;
         width: 90vw;
         height: 6em;
-        border-left: 6vw solid rgb(223, 223, 223);
-        border-right: 6vw solid rgb(223, 223, 223);
-        background-color: rgb(223, 223, 223);
+        border-left: 6vw solid whitesmoke;
+        border-right: 6vw solid whitesmoke;
+        background-color: whitesmoke;
 
-        font-size: 0.7rem;
+        font-size: 0.5rem;
 
         .navItem .navIcon{
             display: block;
