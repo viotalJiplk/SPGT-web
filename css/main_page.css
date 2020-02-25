@@ -12,7 +12,7 @@ body {
   position: sticky;
   top: 0;
   width: 100%;
-  height: 4rem;
+  height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,7 +37,7 @@ body {
 }
 .navWrap nav {
   z-index: 1000;
-  height: 4rem;
+  height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,7 +127,7 @@ body {
   bottom: 0.65em;
 }
 .navWrap nav .hamburgerButton .HBStripes {
-  height: 3rem;
+  height: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,10 +178,11 @@ body {
     bottom: 0;
     display: block;
     width: 90vw;
-    height: 5rem;
-    border-left: 6vw solid #cecece;
-    border-right: 6vw solid #cecece;
-    background-color: #cecece;
+    height: 6em;
+    border-left: 6vw solid #dfdfdf;
+    border-right: 6vw solid #dfdfdf;
+    background-color: #dfdfdf;
+    font-size: 0.7rem;
   }
   body .navWrap nav .navItem .navIcon {
     display: block;
