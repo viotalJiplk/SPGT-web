@@ -130,8 +130,6 @@ body{
     .HBContent{
         z-index: 990;
 
-        display: none;
-
         position: fixed;
         left: 0;
         bottom: 0;
@@ -143,6 +141,10 @@ body{
         overflow-y: auto;
 
         background-color: rgba(0, 0, 0, 0.836);
+
+        transform: scale(0, 1);
+        transform-origin: right;
+        transition: transform 100ms ease-in-out;
 
         a{
             color: white;
@@ -197,6 +199,6 @@ body{
     }
 
     .HBCheckbox:checked + div{
-        display: block;
+        transform: scale(1, 1);
     }
 }

@@ -143,7 +143,6 @@ body {
 }
 .navWrap .HBContent {
   z-index: 990;
-  display: none;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -153,6 +152,14 @@ body {
   line-height: 2em;
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.836);
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 100ms ease-in-out;
+  transition: -webkit-transform 100ms ease-in-out;
+  transition: transform 100ms ease-in-out;
+  transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
 }
 .navWrap .HBContent a {
   color: white;
@@ -200,7 +207,8 @@ body {
   }
 
   .HBCheckbox:checked + div {
-    display: block;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
 }
 body {
