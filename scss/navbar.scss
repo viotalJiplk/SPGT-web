@@ -1,7 +1,8 @@
 @use 'variables' as v;
 
 html{
-    font-size: 130%;
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 body{
@@ -18,7 +19,7 @@ body{
     justify-content: space-around;
     align-items: center;
 
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 
     background-color: rgb(99, 193, 252);
 
@@ -58,6 +59,8 @@ body{
             flex-direction: column;
 
             float: left;
+
+            text-transform: uppercase;
 
             .navIcon{
                 display: none;
@@ -154,7 +157,9 @@ body{
 
 /*Mobile*/
 @media screen and (max-aspect-ratio: 1/1) {
+
     html{
+        /*HMMM font-size: calc(16px + (50 - 16) * ((100vw - 200px) / (1600 - 200)));*/
         font-size: 4vw;
     }
 
@@ -179,8 +184,6 @@ body{
         background-color: whitesmoke;
 
         .navItem{
-            text-transform: uppercase;
-
             .navIcon{
                 display: block;
             }

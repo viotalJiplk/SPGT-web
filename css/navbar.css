@@ -1,5 +1,6 @@
 html {
-  font-size: 130%;
+  /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+  font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 body {
@@ -21,7 +22,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   background-color: #63c1fc;
 }
 .navWrap ul {
@@ -68,6 +69,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   float: left;
+  text-transform: uppercase;
 }
 .navWrap nav .navItem .navIcon {
   display: none;
@@ -162,6 +164,7 @@ body {
 /*Mobile*/
 @media screen and (max-aspect-ratio: 1/1) {
   html {
+    /*HMMM font-size: calc(16px + (50 - 16) * ((100vw - 200px) / (1600 - 200)));*/
     font-size: 4vw;
   }
 
@@ -183,9 +186,6 @@ body {
     border-left: 6vw solid whitesmoke;
     border-right: 6vw solid whitesmoke;
     background-color: whitesmoke;
-  }
-  body .navWrap nav .navItem {
-    text-transform: uppercase;
   }
   body .navWrap nav .navItem .navIcon {
     display: block;
