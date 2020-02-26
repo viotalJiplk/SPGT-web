@@ -5,15 +5,8 @@ html{
     font-size: 130%;
 }
 
-@media screen and (max-width: 900px) {
-    html{
-        font-size: 200%;
-    }
-}
-
 body{
     background-color: v.$colortest;
-    margin: 0;
 }
 
 .mainContent{
