@@ -318,5 +318,11 @@
 			</div>
 			<!-- Pure HTML test -->
 		</div>
+
+		<style>
+			.navItem[href*="zasedani.php"]{
+				background-color: lightskyblue;
+        	}
+		</style>
 	</body>
 </html>

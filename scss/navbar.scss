@@ -20,7 +20,7 @@ body{
 
     font-size: 1.5rem;
 
-    background-color: rgb(77, 133, 255);
+    background-color: rgb(99, 193, 252);
 
     ul {
         list-style: none;
@@ -73,8 +73,9 @@ body{
             flex-direction: column;
 
             float: left;
-
             display: none;
+
+            text-transform: uppercase;
 
             .HBCheckboxLabel{
                 height: 100%;
@@ -166,7 +167,7 @@ body{
     }
 
     body .navWrap nav {
-        font-size: 1rem;
+        font-size: 0.6rem;
 
         position: fixed;
         bottom: 0;
@@ -177,10 +178,12 @@ body{
         border-right: 6vw solid whitesmoke;
         background-color: whitesmoke;
 
-        font-size: 0.6rem;
+        .navItem{
+            text-transform: uppercase;
 
-        .navItem .navIcon{
-            display: block;
+            .navIcon{
+                display: block;
+            }
         }
     }
 

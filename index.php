@@ -19,5 +19,11 @@
 		<div class="meetingsBox">
 			<h3>Zapojte se přímo na schůzích, nebo nás kontaktujte.</h3>
 		</div>
+
+		<style>
+			.navItem[href*="index.php"]{
+				background-color: lightskyblue;
+        	}
+		</style>
 	</body>
 </html>
