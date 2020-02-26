@@ -21,9 +21,15 @@
 		</div>
 
 		<style>
+
 			.navItem[href*="index.php"]{
-				background-color: lightskyblue;
-        	}
+				color: rgb(37, 171, 255);
+			}
+			
+			.navItem[href*="index.php"] .navIcon{
+					fill: rgb(37, 171, 255);
+			}
+
 		</style>
 	</body>
 </html>

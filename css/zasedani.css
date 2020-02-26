@@ -48,6 +48,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   min-width: 60%;
+  text-transform: uppercase;
 }
 .navWrap nav a {
   color: black;
@@ -69,7 +70,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   float: left;
-  text-transform: uppercase;
 }
 .navWrap nav .navItem .navIcon {
   display: none;
@@ -89,7 +89,6 @@ body {
           flex-direction: column;
   float: left;
   display: none;
-  text-transform: uppercase;
 }
 .navWrap nav .hamburgerButton .HBCheckboxLabel {
   height: 100%;
@@ -150,6 +149,7 @@ body {
   height: 100vh;
   text-align: center;
   line-height: 2em;
+  text-transform: uppercase;
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.836);
   -webkit-transform: scale(0, 1);

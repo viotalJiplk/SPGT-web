@@ -22,7 +22,7 @@ body{
     font-size: 1.4rem;
 
     background-color: rgb(99, 193, 252);
-
+    
     ul {
         list-style: none;
         padding: 0;
@@ -45,6 +45,8 @@ body{
         align-items: center;
         min-width: 60%;
 
+        text-transform: uppercase;
+
         a{
             color: black;
         }
@@ -59,8 +61,6 @@ body{
             flex-direction: column;
 
             float: left;
-
-            text-transform: uppercase;
 
             .navIcon{
                 display: none;
@@ -77,8 +77,6 @@ body{
 
             float: left;
             display: none;
-
-            text-transform: uppercase;
 
             .HBCheckboxLabel{
                 height: 100%;
@@ -138,6 +136,7 @@ body{
 
         text-align: center;
         line-height: 2em;
+        text-transform: uppercase;
         overflow-y: auto;
 
         background-color: rgba(0, 0, 0, 0.836);

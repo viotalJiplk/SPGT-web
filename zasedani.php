@@ -321,7 +321,11 @@
 
 		<style>
 			.navItem[href*="zasedani.php"]{
-				background-color: lightskyblue;
+				color: rgb(37, 171, 255);
+        	}
+
+			.navItem[href*="zasedani.php"] .navIcon{
+				fill: rgb(37, 171, 255);
         	}
 		</style>
 	</body>
