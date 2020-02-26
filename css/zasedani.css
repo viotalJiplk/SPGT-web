@@ -185,6 +185,8 @@ body {
     height: 6em;
     border-left: 6vw solid whitesmoke;
     border-right: 6vw solid whitesmoke;
+    -webkit-box-shadow: 0 -0.1em 0.5em rgba(0, 0, 0, 0.5);
+            box-shadow: 0 -0.1em 0.5em rgba(0, 0, 0, 0.5);
     background-color: whitesmoke;
   }
   body .navWrap nav .navItem .navIcon {
