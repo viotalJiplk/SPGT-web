@@ -1,0 +1,26 @@
+Order deny,allow
+Allow from *
+
+AddDefaultCharset utf-8
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+
+# --------------------------------------------
+# Rewrite so that php extentions are not shown
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+# ------------------------------------------
+# Redirect to index.php if not writen to url
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}index.php -f
+RewriteRule ^(.*)$ index [L]
+
+# ------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* http://%{HTTP_HOST}/404?uri=http://%{HTTP_HOST}%{REQUEST_URI} [L]
+</IfModule>

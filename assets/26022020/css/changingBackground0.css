@@ -1,0 +1,31 @@
+.header::before {
+    background-image: url(../../img/pozadi/lg/1.jpg);
+}
+
+
+body:before {
+    content: url(../../img/pozadi/lg/2.jpg);
+}
+
+
+@media (max-width: 991.98px) {
+    .header::before {
+        background-image: url(../../img/pozadi/md/1.jpg);
+    }
+
+
+    body:after {
+        background-image: url(../../img/pozadi/md/2.jpg);
+    }
+}
+
+
+@media (max-width: 767.98px) {
+    .header::before {
+        background-image: url(../../img/pozadi/sm/1.jpg);
+    }
+
+    body:after {
+        background-image: url(../../img/pozadi/sm/2.jpg);
+    }
+}

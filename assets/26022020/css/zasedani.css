@@ -1,0 +1,62 @@
+.zasedani {
+  width: 90%;
+  margin: 0 auto 0.5em;
+  overflow: hidden;
+  background-color: snow;
+  -webkit-box-shadow: 0.05em 0.2em 0.3em rgba(0, 0, 0, 0.5);
+          box-shadow: 0.05em 0.2em 0.3em rgba(0, 0, 0, 0.5);
+}
+.zasedani .zasedaniTopWrap {
+  overflow: hidden;
+  background-color: lightgray;
+}
+.zasedani .zasedaniTop {
+  font-size: 1.5rem;
+  margin: 0.5em 0.5em 0.4em 0.5em;
+}
+.zasedani .zasedaniTop .dropdownButtonWrap {
+  float: right;
+  cursor: pointer;
+  width: 1em;
+  text-align: center;
+}
+.zasedani .zasedaniTop .dropdownButton {
+  border: solid black;
+  border-width: 0 0.12em 0.12em 0;
+  display: inline-block;
+  padding: 3px;
+  height: 0.15em;
+  width: 0.15em;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-bottom: 0.11em;
+}
+.zasedani .zasedaniCont {
+  display: none;
+  overflow: hidden;
+  margin: 0 1em 1em;
+}
+.zasedani .zasedaniCont h4 {
+  margin-top: 0.2em;
+}
+.zasedani .checkbox {
+  display: none;
+}
+.zasedani .checkbox:checked + label + div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+.zasedani .checkbox:checked + label + div .program, .zasedani .checkbox:checked + label + div .downloads, .zasedani .checkbox:checked + label + div .statistiky {
+  margin: 1em 0.7em 0;
+}
+.zasedani .checkbox:checked + label .dropdownButton {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}

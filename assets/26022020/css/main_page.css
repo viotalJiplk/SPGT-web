@@ -1,0 +1,17 @@
+.articleBox {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #74b5ff;
+}
+
+.articleBox .article {
+  outline: #aaff00;
+}
+
+.meetingsBox {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #71c550;
+}

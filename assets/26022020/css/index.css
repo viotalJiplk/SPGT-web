@@ -1,0 +1,467 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
+
+
+body {
+    min-width: 280px;
+    margin: auto;
+    width: 100%;
+    min-height: 100%;
+    margin: auto;
+    position: relative;
+}
+
+
+    body:before {
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+        visibility: hidden;
+    }
+
+
+h1, h2, h3, h4,
+.list-group .list-group-item > a.nav-link i.fa {
+    color: rgb(255, 196, 15);
+}
+
+
+li .list-group .list-group-item > a.nav-link i.fa {
+    color: inherit;
+}
+
+
+.bg-site {
+    background-color: rgb(24, 62, 96); /*  !! .content-loading div (border-) */
+}
+
+.c-site {
+    color: rgb(255, 196, 15);
+}
+
+
+
+.list-group .list-group-item.active {
+    background-color: #17a2b8;
+    border: none;
+}
+
+a {
+    color: #158bc5;
+}
+
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+.header {
+    position: relative;
+    z-index: 1049;
+}
+
+    .header::before, .header::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    .header::before {
+        background-position: top;
+        background-size: cover;
+        -webkit-animation: backgroundAutoScroll 25s linear infinite;
+        animation: backgroundAutoScroll linear infinite;
+        -webkit-animation-duration: 25s;
+        animation-duration: 25s; /* zmenit taky v index.js - setInterval */
+        background-position-x: center;
+        background-repeat: no-repeat;
+        -webkit-transition: .2s;
+        -o-transition: .2s;
+        transition: .2s;
+    }
+
+    .header.header-smaller::before {
+        -webkit-animation: backgroundAutoScroll linear infinite;
+        animation: backgroundAutoScroll linear infinite;
+        -webkit-animation-duration: 50s;
+        animation-duration: 50s; /* zmenit taky v index.js - setInterval */
+    }
+
+    .header::after {
+        background-color: rgba(0, 0, 0, 0.26);
+    }
+
+
+    .header .navbar-area {
+        background-color: rgba(0, 0, 0, 0.6);
+        -webkit-box-shadow: 0em 20px 20px 20px rgba(0,0,0,0.6);
+        box-shadow: 0em 20px 20px 20px rgba(0,0,0,0.6);
+    }
+
+
+    .header > h1 {
+        background-color: rgba(0, 0, 0, 0.6);
+        -webkit-box-shadow: 0em -20px 20px 5px rgba(0,0,0,0.6);
+        box-shadow: 0em -20px 20px 5px rgba(0,0,0,0.6);
+    }
+
+    .header.header-smaller .header-page-navigator {
+        display: none;
+    }
+
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.59);
+}
+
+
+@-webkit-keyframes backgroundAutoScroll {
+    0% {
+        background-position-y: 0;
+    }
+
+    50% {
+        background-position-y: 100%;
+    }
+
+    100% {
+        background-position-y: 0;
+    }
+}
+
+
+@keyframes backgroundAutoScroll {
+    0% {
+        background-position-y: 0;
+    }
+
+    50% {
+        background-position-y: 100%;
+    }
+
+    100% {
+        background-position-y: 0;
+    }
+}
+
+
+
+
+
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: table;
+}
+
+
+
+::-moz-selection {
+    color: white;
+    background: black;
+}
+
+
+input::-ms-clear {
+    display: none;
+}
+
+
+.container-loading {
+    position: absolute;
+    background: white;
+    width: 100%;
+    z-index: 10000;
+    cursor: wait;
+    height: 100%;
+}
+
+
+    .container-loading div:before {
+        content: '';
+        display: block;
+        height: 0;
+        margin: auto;
+        border-radius: 50%;
+        border: 0.4em solid white;
+        border-top: 0.4em solid rgb(24, 62, 96);
+        border-bottom: 0.4em solid rgb(24, 62, 96);
+        -webkit-animation: spin 1s ease-in-out infinite;
+        animation: spin 1s ease-in-out infinite;
+        padding: 2.5em;
+    }
+
+    .container-loading div {
+        height: 100vh;
+        position: fixed;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+    }
+
+
+.upto {
+    display: none;
+    position: fixed;
+    right: 0.5em;
+    bottom: 0;
+    z-index: 1049;
+}
+
+
+.footer {
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
+
+
+.list-group .list-group-item {
+    padding: .5em .6em;
+}
+
+    .list-group .list-group-item > a.nav-link {
+        color: #343a40;
+    }
+
+
+        .list-group .list-group-item > a.nav-link:hover {
+            color: #121416;
+        }
+
+
+    .list-group .list-group-item.active > a.nav-link {
+        color: white;
+    }
+
+
+ul {
+    list-style-type: circle;
+}
+
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+
+a.img-container {
+    position: relative;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    display: inline-block;
+}
+
+
+    a.img-container:after {
+        height: 6px;
+        bottom: 0;
+        border-radius: 0 0 2px 2px;
+        background: rgba(255,255,255,0.3);
+    }
+
+
+    a.img-container:before {
+        top: 0;
+        height: 100%;
+        background: url(../../img/zoom.ico) no-repeat center center;
+        background-size: 1.2em 1.2em;
+        background-color: rgba(0,0,0,0.4);
+    }
+
+
+    a.img-container:before, a.img-container:after {
+        content: "";
+        width: 100%;
+        -webkit-transition: inherit;
+        -o-transition: inherit;
+        transition: inherit;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+    }
+
+
+a.img-container {
+    margin-bottom: .2em;
+}
+
+
+    a.img-container img {
+        height: inherit;
+    }
+
+
+    a.img-container.floating {
+        margin-bottom: auto;
+    }
+
+
+.tooltip {
+    margin: .4rem;
+    border-radius: .1rem;
+}
+
+    .tooltip.show {
+        opacity: 1;
+    }
+
+    .tooltip .arrow {
+        display: none;
+    }
+
+.tooltip-inner {
+    background-color: white;
+    color: black;
+    border: 1px solid darkgray;
+}
+
+
+
+
+.fc h2 {
+    font-size: 1.5rem;
+}
+
+
+.fc .btn-group .btn {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+}
+
+
+.fc .fc-view.fc-dayGridMonth-view td.fc-today {
+    background-color: initial;
+}
+
+    .fc .fc-view.fc-dayGridMonth-view td.fc-today .fc-day-number {
+        background: #343a40;
+        border-bottom-left-radius: .3rem;
+        color: white;
+        padding: .1rem .2rem .2rem .3rem;
+    }
+
+.fc .fc-view-container.fc-view-container-loading:before, .fc .fc-view-container.fc-view-container-loading:after {
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    position: absolute;
+}
+
+
+.fc .fc-view-container.fc-view-container-loading:before {
+    background-color: white;
+    z-index: 1047;
+}
+
+.fc .fc-view-container.fc-view-container-loading:after {
+    background-color: white;
+    background: url(../../img/img-loading.gif) center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    max-width: 291px;
+    z-index: 1048;
+    margin: auto;
+}
+
+.fc .fc-toolbar {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+
+
+@media screen and (min-width : 992px) {
+    a.img-container.zoom:hover:before, a.img-container.zoom:hover:after {
+        opacity: 0.8;
+    }
+}
+
+
+
+@media screen and (min-width : 768px) {
+    a.img-container.zoom:hover:before, a.img-container.zoom:hover:after {
+        opacity: 0.8;
+    }
+
+    .navbar-nav {
+        max-width: 850px;
+    }
+}
+
+
+@media screen and (max-width : 991.98px) {
+    ar .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+
+
+    .container-loading div:before {
+        padding: 2em;
+    }
+
+
+    .header, .header .navbar-area {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+
+        .header .header-page-navigator {
+            display: none;
+        }
+
+        .header.header-smaller::before {
+            -webkit-animation-duration: 25s;
+            animation-duration: 25s; /* zmenit taky v index.js - setInterval */
+        }
+
+    .fc .fc-toolbar {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+        .fc .fc-toolbar .fc-left {
+            margin: .4rem .9rem;
+        }
+
+}
