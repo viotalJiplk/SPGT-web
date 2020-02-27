@@ -13,7 +13,6 @@ body {
   position: sticky;
   top: 0;
   width: 100%;
-  height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,7 +21,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   background-color: #63c1fc;
 }
 .navWrap ul {
@@ -169,7 +168,7 @@ body {
 }
 
 /*Mobile vertical*/
-@media screen and (pointer: coarse) and (max-aspect-ratio: 1/1) and (max-device-width: 1900) {
+@media screen and (pointer: coarse) and (hover: none) and (max-aspect-ratio: 1/1) and (max-device-width: 1900) {
   html {
     font-size: 4vmin;
   }
@@ -210,9 +209,20 @@ body {
             transform: scale(1, 1);
   }
 }
-@media screen and (pointer: coarse) and (min-aspect-ratio: 1/1) and (max-device-width: 1900) {
+@media screen and (pointer: coarse) and (hover: none) and (min-aspect-ratio: 1/1) and (max-device-width: 1900) {
   html {
     font-size: 4vmin;
+  }
+
+  body .navWrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .navWrap .logo {
+    min-width: 100%;
+  }
+  body .navWrap nav {
+    min-width: 100%;
   }
 }
 body {

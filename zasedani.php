@@ -320,13 +320,15 @@
 		</div>
 
 		<style>
-			.navItem[href*="zasedani.php"]{
-				color: rgb(37, 171, 255);
-        	}
-
-			.navItem[href*="zasedani.php"] .navIcon{
-				fill: rgb(37, 171, 255);
-        	}
+			@media screen and (pointer: coarse) and(hover:none) and (max-aspect-ratio: 1/1) and (max-device-width: 1900){
+				.navItem[href*="zasedani.php"]{
+					color: rgb(37, 171, 255);
+				}
+			
+				.navItem[href*="zasedani.php"] .navIcon{
+					fill: rgb(37, 171, 255);
+				}
+			}
 		</style>
 	</body>
 </html>

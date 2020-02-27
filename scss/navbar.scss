@@ -14,12 +14,11 @@ body{
     position: sticky;
     top: 0;
     width: 100%;
-    height: 3rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
 
-    font-size: 1.4rem;
+    font-size: 1.25rem;
 
     background-color: rgb(99, 193, 252);
     
@@ -157,7 +156,15 @@ body{
 }
 
 /*Mobile vertical*/
-@media screen and (pointer: coarse) and (max-aspect-ratio: 1/1) and (max-device-width: 1900){
+@media screen and (pointer: coarse)
+              and(hover:none)
+              and (max-aspect-ratio: 1/1)
+
+              /*I had to add this because when
+              I rotate my laptops screen it changes
+              main input to touch.
+              (It registers as pointer:course and hover:none)*/
+              and (max-device-width: 1900){
     html{
         font-size: 4vmin;
     }
@@ -200,8 +207,30 @@ body{
     }
 }
 
-@media screen and (pointer: coarse) and (min-aspect-ratio: 1/1) and (max-device-width: 1900){
+@media screen and (pointer: coarse) 
+              and(hover:none)
+              and (min-aspect-ratio: 1/1)
+
+              /*I had to add this because when
+              I rotate my laptops screen it changes
+              main input to touch.
+              (It registers as pointer:course and hover:none)*/
+              and (max-device-width: 1900){
     html{
         font-size: 4vmin;
+    }
+
+    body{
+        .navWrap{
+            flex-wrap: wrap;
+
+            .logo{
+                min-width: 100%;
+            }
+
+            nav{
+                min-width: 100%;
+            }
+        }
     }
 }
