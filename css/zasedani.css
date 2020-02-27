@@ -168,11 +168,10 @@ body {
   margin: 5rem 0 7rem 0;
 }
 
-/*Mobile*/
-@media screen and (max-aspect-ratio: 1/1) {
+/*Mobile vertical*/
+@media screen and (pointer: coarse) and (max-aspect-ratio: 1/1) and (max-device-width: 1900) {
   html {
-    /*HMMM font-size: calc(16px + (50 - 16) * ((100vw - 200px) / (1600 - 200)));*/
-    font-size: 4vw;
+    font-size: 4vmin;
   }
 
   body {
@@ -209,6 +208,11 @@ body {
   .HBCheckbox:checked + div {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
+  }
+}
+@media screen and (pointer: coarse) and (min-aspect-ratio: 1/1) and (max-device-width: 1900) {
+  html {
+    font-size: 4vmin;
   }
 }
 body {
