@@ -156,7 +156,7 @@ body{
 }
 
 /*Mobile vertical*/
-@media screen and (pointer: coarse)
+@media screen /*and (pointer: coarse)*/
               and(hover:none)
               and (max-aspect-ratio: 1/1)
 
@@ -164,7 +164,7 @@ body{
               I rotate my laptops screen it changes
               main input to touch.
               (It registers as pointer:course and hover:none)*/
-              and (max-device-width: 1900){
+              and (max-device-width: 1900px){
     html{
         font-size: 4vmin;
     }
@@ -208,7 +208,7 @@ body{
 }
 
 /* Mobile horizontal */
-@media screen and (pointer: coarse) 
+@media screen /*and (pointer: coarse)*/ 
               and(hover:none)
               and (min-aspect-ratio: 1/1)
 
@@ -216,7 +216,7 @@ body{
               I rotate my laptops screen it changes
               main input to touch.
               (It registers as pointer:course and hover:none)*/
-              and (max-device-width: 1900){
+              and (max-device-width: 1900px){
     html{
         font-size: 4vmin;
     }
