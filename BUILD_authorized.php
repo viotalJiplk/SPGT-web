@@ -6,7 +6,7 @@ function check_authorized ($toRootRelStr = './') {
     $sessionData = getSessionData();
     if (!isset($sessionData) || count($sessionData) == 0) {
         include_once($toRootRelStr.'helpers/redirectHelper.php');
-        redirect($toRootRelStr.'set');
+        redirect($toRootRelStr.'user/login');
         exit();
     }
 }

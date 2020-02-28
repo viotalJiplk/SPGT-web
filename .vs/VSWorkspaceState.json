@@ -3,14 +3,12 @@
     "",
     "\\articles",
     "\\assets\\26022020\\css",
-    "\\assets\\26022020\\js",
-    "\\assets\\img\\favicon",
-    "\\assets\\img\\pozadi",
-    "\\assets\\img\\pozadi\\lg",
-    "\\assets\\img\\pozadi\\md",
-    "\\assets\\img\\pozadi\\sm",
-    "\\views\\articles"
+    "\\databases",
+    "\\databases\\access",
+    "\\databases\\newdb",
+    "\\databases\\tools",
+    "\\user"
   ],
-  "SelectedNode": "\\articles\\2020-2021.php",
+  "SelectedNode": "\\databases\\access\\connection.php",
   "PreviewInSolutionExplorer": false
 }
