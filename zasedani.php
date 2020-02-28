@@ -318,5 +318,17 @@
 			</div>
 			<!-- Pure HTML test -->
 		</div>
+
+		<style>
+			@media screen and (hover:none) and (max-aspect-ratio: 1/1) and (max-device-width: 1900px){
+				.navItem[href*="zasedani.php"]{
+					color: rgb(37, 171, 255);
+				}
+			
+				.navItem[href*="zasedani.php"] .navIcon{
+					fill: rgb(37, 171, 255);
+				}
+			}
+		</style>
 	</body>
 </html>
