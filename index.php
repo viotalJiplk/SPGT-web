@@ -22,7 +22,7 @@
 
 		<style>
 
-			@media screen and(hover:none) and (max-aspect-ratio: 1/1) and (max-device-width: 1900px){
+			@media screen and (hover:none) and (max-aspect-ratio: 1/1) and (max-device-width: 1900px){
 				.navItem[href*="index.php"]{
 					color: rgb(37, 171, 255);
 				}

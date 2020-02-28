@@ -272,10 +272,3 @@ body {
   overflow: hidden;
   background-color: #71c550;
 }
-
-@media screen and (max-aspect-ratio: 1/1) {
-  body .titleBox {
-    font-size: 1vh;
-    height: 35vh;
-  }
-}
