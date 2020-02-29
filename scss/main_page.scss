@@ -1,10 +1,6 @@
 @use 'variables' as v;
 @use 'navbar';
 
-body{
-    background-color: v.$colortest;
-}
-
 .titleBox{
     font-size: 0.8rem;
 
