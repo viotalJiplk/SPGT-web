@@ -176,3 +176,12 @@ body {
     min-width: 100%;
   }
 }
+html {
+  font-size: 130%;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+  color: black;
+}
