@@ -1,0 +1,52 @@
+@use 'global';
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+
+    background-color: white;
+}
+
+.mainContent{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+
+    width: 20em;
+    height: 8em;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .textInput{
+        font-size: 100%;
+
+        width: 100%;
+        width: 15em;
+        height: 2em;
+
+        border: 0.1em solid grey;
+    }
+
+    .inputButton{
+        font-size: 100%;
+
+        background: rgb(0, 179, 0);
+    }
+}
