@@ -11,7 +11,7 @@ function compile(){
     // get scss files
     return gulp.src('./scss/**/*.scss')
     // compile them
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     // put css into its folder
     .pipe(gulp.dest('./css'))
 

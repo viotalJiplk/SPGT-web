@@ -1,10 +1,6 @@
 @use 'variables' as v;
 @use 'navbar';
 
-body{
-    background-color: v.$colortest;
-}
-
 .mainContent{
     width: 85vw;
     margin: 1rem auto 1rem;
