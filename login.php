@@ -49,14 +49,17 @@
 
             <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                 <div>
-                    <p>Uživatelské jméno:</p>
+                    <span>Uživatelské jméno:</span>
                     <input class="textInput" type="text" placeholder="jméno" name="username" required/>
                 </div>
                 <div>
-                    <p>Heslo:</p>
+                    <span>Heslo:</span>
                     <input class="textInput" type="password" placeholder="heslo" name="password" required/>
                 </div>
-                <a href="#">Zapomněli jste heslo?</a>
+                <div class="links">
+                    <a href="signup.php">Registrovat se.</a>
+                    <a href="#">Zapomněli jste heslo?</a>
+                </div>
                 <button class="inputButton" type="submit">Přihlásit se</button>
             </form>
             <?php

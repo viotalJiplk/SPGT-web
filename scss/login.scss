@@ -1,7 +1,7 @@
 @use 'global';
 
 html{
-    height: 100%;
+    height: 100vh;
 }
 
 body{
@@ -11,6 +11,8 @@ body{
 }
 
 .mainContent{
+    font-size: 1.7rem;
+
     position: absolute;
     top: 0;
     width: 100vw;
@@ -21,12 +23,16 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    h3{
+        margin-bottom: 1.5em;
+    }
 }
 
 form{
 
-    width: 20em;
-    height: 8em;
+    width: 80vw;
+    height: 12em;
 
     display: flex;
     flex-direction: column;
@@ -34,22 +40,33 @@ form{
     align-items: center;
 
     div{
+        width: 100%;
+
         .textInput{
             font-size: 100%;
     
-            display: inline-block;
+            display: block;
             width: 100%;
-            width: 15em;
             height: 2em;
     
             border: 0.1em solid grey;
         }
     }
 
-    .inputButton{
-        font-size: 100%;
+    .links{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 
-        background: rgb(0, 179, 0);
+    button{
+        font-size: 130%;
+    }
+
+    .inputButton{
+        background-color: rgb(0, 179, 0);
+
+        align-self: flex-end;
     }
 
     a{

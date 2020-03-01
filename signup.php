@@ -36,11 +36,11 @@
 
             <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                 <div>
-                    <p>Uživatelské jméno:</p>
+                    <span>Uživatelské jméno:</span>
                     <input type="text" value="username" name="username" required/>
                 </div>
                 <div>
-                    <p>Heslo:</p>
+                    <span>Heslo:</span>
                     <input type="password" name="password" required/>
                 </div>
                 <button type="submit">signup</button>
