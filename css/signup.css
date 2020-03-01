@@ -1,3 +1,185 @@
+h3 {
+  margin: 0;
+}
+
+html {
+  /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+  font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+body {
+  margin: 0;
+}
+
+.navWrap {
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.25rem;
+  background-color: #63c1fc;
+}
+.navWrap ul {
+  list-style: none;
+  padding: 0;
+}
+.navWrap a {
+  text-decoration: none;
+}
+.navWrap .logo {
+  font-size: 2rem;
+  text-align: center;
+}
+.navWrap nav {
+  z-index: 1000;
+  height: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 60%;
+  text-transform: uppercase;
+}
+.navWrap nav a {
+  color: black;
+}
+.navWrap nav .navItem {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  float: left;
+}
+.navWrap nav .navItem .navIcon {
+  display: none;
+}
+.navWrap nav .hamburgerButton {
+  width: 25%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  float: left;
+  display: none;
+}
+.navWrap nav .hamburgerButton .HBCheckboxLabel {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe,
+.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:before,
+.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:after {
+  background: black;
+  height: 0.4em;
+  width: 2.8em;
+  border-radius: 0.2em;
+  position: relative;
+}
+.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:before,
+.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:after {
+  content: "";
+  position: absolute;
+}
+.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:before {
+  top: 0.65em;
+}
+.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:after {
+  bottom: 0.65em;
+}
+.navWrap nav .hamburgerButton .HBStripes {
+  height: 3em;
+  display: flex;
+  align-items: center;
+}
+.navWrap .HBCheckbox {
+  display: none;
+}
+.navWrap .HBContent {
+  z-index: 990;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  line-height: 2em;
+  text-transform: uppercase;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.836);
+  transform: scale(0, 1);
+  transform-origin: right;
+  transition: transform 100ms ease-in-out;
+}
+.navWrap .HBContent a {
+  color: white;
+}
+.navWrap .HBContent ul {
+  margin: 5rem 0 7rem 0;
+}
+
+/*Mobile vertical*/
+@media screen and (hover: none) and (max-aspect-ratio: 1/1) and (max-device-width: 1900px) {
+  html {
+    font-size: 4vmin;
+  }
+
+  body {
+    margin: 0 0 6rem;
+  }
+
+  .navWrap {
+    position: static;
+  }
+
+  body .navWrap nav {
+    font-size: 0.6rem;
+    position: fixed;
+    bottom: 0;
+    display: block;
+    width: 90vw;
+    height: 6em;
+    border-left: 6vw solid whitesmoke;
+    border-right: 6vw solid whitesmoke;
+    box-shadow: 0 -0.1em 0.5em rgba(0, 0, 0, 0.5);
+    background-color: whitesmoke;
+  }
+  body .navWrap nav .navItem .navIcon {
+    display: block;
+  }
+
+  body .navWrap nav .hamburgerButton {
+    display: flex;
+  }
+
+  .HBCheckbox:checked + div {
+    transform: scale(1, 1);
+  }
+}
+/* Mobile horizontal */
+@media screen and (hover: none) and (min-aspect-ratio: 1/1) and (max-device-width: 1900px) {
+  html {
+    font-size: 4vmin;
+  }
+
+  body .navWrap {
+    flex-wrap: wrap;
+  }
+  body .navWrap .logo {
+    min-width: 100%;
+  }
+  body .navWrap nav {
+    min-width: 100%;
+  }
+}
 html {
   height: 100vh;
 }
@@ -56,4 +238,5 @@ form .inputButton {
 form a {
   text-decoration: none;
   color: #adadad;
+  align-self: flex-start;
 }
