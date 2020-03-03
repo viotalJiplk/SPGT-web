@@ -5,8 +5,9 @@ Zdrojový kód webových stránek školního parlamentu gymnázia Tišnov (SPGT)
 
 ## Todo list
 1. responzivní webový design
-1. Progresivní webová apka (PWA)
 1. Systém na vytváření, zobrazování a editování článků
+1. Systém pro záznam a zobrazení docházky a hlasování
+1. Progresivní webová apka (PWA)
 1. optmalizace pro pěkný score na lighthouse
 1. Dodělat robot.txt
 
