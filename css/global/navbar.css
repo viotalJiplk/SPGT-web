@@ -1,3 +1,8 @@
+:root {
+  --primary: #002574;
+  --secndary: yellow;
+}
+
 html {
   /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
   font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
