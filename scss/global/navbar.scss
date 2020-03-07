@@ -31,7 +31,7 @@
         z-index: 1000;
         height: 3rem;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
         min-width: 60%;
 
@@ -44,7 +44,7 @@
         }
 
         .navItem {
-            width: 25%;
+            width: max-content;
             height: 100%;
 
             display: flex;
@@ -53,6 +53,8 @@
             flex-direction: column;
 
             float: left;
+
+            white-space: nowrap;
 
             .navIcon{
                 display: none;
@@ -186,6 +188,8 @@
         background-color: whitesmoke;
 
         .navItem{
+            width: 25%;
+
             .navIcon{
                 display: block;
             }

@@ -12,12 +12,21 @@
     overflow: hidden;
     background-color: snow;
     //border-bottom: 0.3em solid black;
-    box-shadow: 0.05em 0.2em 0.3em rgba(0, 0, 0, .5);
 
     .zasedaniTopWrap{
         overflow: hidden;
         @include g.var(background-color, primary);
-        color: white;
+        color: snow;
+        cursor: pointer;
+    }
+
+    .zasedaniTopWrap:hover,
+    .zasedaniTopWrap:focus-within{
+        @include g.var(color, secondary);
+
+        .dropdownButton{
+            @include g.var(border-color, secondary);
+        }
     }
 
     .zasedaniTop{
@@ -47,8 +56,10 @@
 
     .zasedaniCont{
         display: none;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-between;
         overflow: hidden;
-        margin: 0 1em 1em;
 
         h4{
             margin-top: 0.2em;
@@ -58,11 +69,14 @@
     .checkbox{
         display: none;
 
+        &:checked + label .zasedaniTopWrap{
+            @include g.var(color, secondary);
+        }
+
         &:checked + label + div{
+
+            // animation in JavaScript
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-content: space-between;
 
             .program, .downloads, .statistiky{
                 margin: 1em 0.7em 0;
@@ -71,6 +85,7 @@
 
         &:checked + label .dropdownButton{
             transform: rotate(-135deg);
+            @include g.var(border-color, secondary);
         }
     }
 }
