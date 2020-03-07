@@ -1,4 +1,4 @@
-@use 'global';
+@use 'global' as g;
 
 .mainContent{
     width: 85vw;
@@ -16,7 +16,8 @@
 
     .zasedaniTopWrap{
         overflow: hidden;
-        background-color: rgb(211, 211, 211);
+        @include g.var(background-color, primary);
+        color: white;
     }
 
     .zasedaniTop{
@@ -31,7 +32,7 @@
         }
 
         .dropdownButton{
-            border: solid black;
+            border: solid white;
             border-width: 0 0.12em 0.12em 0;
             display: inline-block;
             padding: 0.1em;

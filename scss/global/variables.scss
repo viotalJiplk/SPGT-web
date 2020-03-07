@@ -5,8 +5,9 @@ $color0: black;
 $color0light: rgb(158, 158, 158);
 
 $vars: (
-    primary: rgb(0, 37, 116),
-    secndary: yellow,
+    primary: #183e60,
+    secondary: #fdcc1c,
+    background: #eaeaea,
 );
 
 @mixin var($property, $variable) {

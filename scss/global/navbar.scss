@@ -1,14 +1,5 @@
 @use 'variables' as v;
 
-html{
-    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
-    font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
-}
-
-body{
-    margin: 0;
-}
-
 .navWrap{
     z-index: 1000;
     position: sticky;
@@ -20,7 +11,7 @@ body{
 
     font-size: 1.25rem;
 
-    background-color: rgb(99, 193, 252);
+    @include v.var(background-color, primary);
     
     ul {
         list-style: none;
@@ -45,9 +36,11 @@ body{
         min-width: 60%;
 
         text-transform: uppercase;
+        letter-spacing: 0.07em;
 
         a{
-            color: black;
+            font-weight: 600;
+            @include v.var(color, secondary);
         }
 
         .navItem {
@@ -185,10 +178,11 @@ body{
         display: block;
         width: 90vw;
         height: 6em;
-        border-left: 6vw solid whitesmoke;
+        border-left: 6vw solid #f5f5f5;
         border-right: 6vw solid whitesmoke;
 
         box-shadow: 0 -0.1em 0.5em rgba(0, 0, 0, 0.5);
+
         background-color: whitesmoke;
 
         .navItem{

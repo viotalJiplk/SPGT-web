@@ -3,13 +3,16 @@ h3 {
 }
 
 :root {
-  --primary: #002574;
-  --secndary: yellow;
+  --primary: #183e60;
+  --secondary: #fdcc1c;
+  --background: #eaeaea;
 }
 
 html {
   /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
   font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+  background-color: #eaeaea;
+  background-color: var(--background);
 }
 
 body {
@@ -25,7 +28,8 @@ body {
   justify-content: space-around;
   align-items: center;
   font-size: 1.25rem;
-  background-color: #63c1fc;
+  background-color: #183e60;
+  background-color: var(--primary);
 }
 .navWrap ul {
   list-style: none;
@@ -46,9 +50,12 @@ body {
   align-items: center;
   min-width: 60%;
   text-transform: uppercase;
+  letter-spacing: 0.07em;
 }
 .navWrap nav a {
-  color: black;
+  font-weight: 600;
+  color: #fdcc1c;
+  color: var(--secondary);
 }
 .navWrap nav .navItem {
   width: 25%;
@@ -152,7 +159,7 @@ body {
     display: block;
     width: 90vw;
     height: 6em;
-    border-left: 6vw solid whitesmoke;
+    border-left: 6vw solid #f5f5f5;
     border-right: 6vw solid whitesmoke;
     box-shadow: 0 -0.1em 0.5em rgba(0, 0, 0, 0.5);
     background-color: whitesmoke;

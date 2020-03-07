@@ -1,0 +1,16 @@
+:root {
+  --primary: #183e60;
+  --secondary: #fdcc1c;
+  --background: #eaeaea;
+}
+
+html {
+  /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+  font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+  background-color: #eaeaea;
+  background-color: var(--background);
+}
+
+body {
+  margin: 0;
+}
