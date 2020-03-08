@@ -8,6 +8,8 @@ $vars: (
     primary: #183e60,
     secondary: #fdcc1c,
     background: #eaeaea,
+    blck: #000000,
+    wht: #fffafa,
 );
 
 @mixin var($property, $variable) {

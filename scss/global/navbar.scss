@@ -29,7 +29,7 @@
 
     nav{
         z-index: 1000;
-        height: 3rem;
+        height: 3em;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -187,6 +187,10 @@
 
         background-color: whitesmoke;
 
+        a{
+            @include v.var(color, blck);
+        }
+
         .navItem{
             width: 25%;
 
@@ -221,14 +225,9 @@
 
     body{
         .navWrap{
-            flex-wrap: wrap;
-
-            .logo{
-                min-width: 100%;
-            }
-
+            font-size: 1.5vw;
             nav{
-                min-width: 100%;
+                font-size: 1.5em;
             }
         }
     }
