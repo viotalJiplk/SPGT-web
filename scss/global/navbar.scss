@@ -1,4 +1,4 @@
-@use 'variables' as v;
+@use 'variables' as g;
 
 .navWrap{
     z-index: 1000;
@@ -11,7 +11,7 @@
 
     font-size: 1.25rem;
 
-    @include v.var(background-color, primary);
+    @include g.var(background-color, primary);
     
     ul {
         list-style: none;
@@ -40,7 +40,7 @@
 
         a{
             font-weight: 600;
-            @include v.var(color, secondary);
+            @include g.var(color, secondary);
         }
 
         .navItem {
@@ -152,7 +152,7 @@
 
 /*Mobile vertical*/
 @media screen /* under 550px -> probably a mobile phone */
-              and (max-device-width: 600px)
+              and (max-device-width: g.$mobile-screen-width)
               /* (pointer: coarse) - it isn't just shrunk down pc browser */ 
               and (hover:none)
               /* just to see device rotation */
@@ -185,7 +185,7 @@
         background-color: whitesmoke;
 
         a{
-            @include v.var(color, blck);
+            @include g.var(color, blck);
         }
 
         .navItem{
@@ -208,7 +208,7 @@
 
 /* Mobile horizontal */
 @media screen /* under 550px -> probably a mobile phone */
-              and (max-device-width: 600px)
+              and (max-device-width: g.$mobile-screen-width)
               /* (pointer: coarse) - it isn't just shrunk down pc browser */ 
               and (hover:none)
               /* just to see device rotation */

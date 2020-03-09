@@ -19,19 +19,5 @@
 		<div class="meetingsBox">
 			<h3>Zapojte se přímo na schůzích, nebo nás kontaktujte.</h3>
 		</div>
-
-		<style>
-
-			@media screen and (hover:none) and (max-aspect-ratio: 1/1) and (max-device-width: 600px){
-				.navItem[href*="index.php"]{
-					color: rgb(37, 171, 255);
-				}
-			
-				.navItem[href*="index.php"] .navIcon{
-					fill: rgb(37, 171, 255);
-				}
-			}
-
-		</style>
 	</body>
 </html>

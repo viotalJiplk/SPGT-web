@@ -2,8 +2,10 @@ h3 {
   margin: 0;
 }
 
+/*device specifications*/
 :root {
   --primary: #183e60;
+  --prim-light: #266297;
   --secondary: #fdcc1c;
   --background: #eaeaea;
   --blck: #000000;
@@ -275,4 +277,17 @@ body {
   transform: rotate(-135deg);
   border-color: #fdcc1c;
   border-color: var(--secondary);
+}
+
+/* This changes color of navigation buttons. */
+@media screen and (hover: none) and (max-aspect-ratio: 1/1) and (max-device-width: 600px) {
+  .navItem[href*="zasedani.php"] {
+    color: #266297;
+    color: var(--prim-light);
+  }
+
+  .navItem[href*="zasedani.php"] .navIcon {
+    fill: #266297;
+    fill: var(--prim-light);
+  }
 }

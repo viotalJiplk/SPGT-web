@@ -1,11 +1,10 @@
-$colortest: khaki;
-$color1: blue;
-$color2: yellow;
-$color0: black;
-$color0light: rgb(158, 158, 158);
+/*device specifications*/
+$mobile-screen-width: 600px;
 
 $vars: (
+    /*colors*/
     primary: #183e60,
+    prim-light: #266297,
     secondary: #fdcc1c,
     background: #eaeaea,
     blck: #000000,
@@ -16,7 +15,6 @@ $vars: (
     #{$property}: map-get($vars, $variable);
     #{$property}: var(--#{$variable});
 }
-
 
 :root {
     @each $property, $value in $vars {
