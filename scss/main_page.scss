@@ -1,4 +1,4 @@
-@use 'global';
+@use 'global' as g;
 
 .titleBox{
     font-size: 0.8rem;
@@ -30,13 +30,11 @@
 
 .articleBox{
     width: 100%;
-    margin: 0;
+    margin: 2em 0 0 0;
     overflow: hidden;
-
-    background-color: rgb(116, 181, 255);
     
     .article{
-        outline: rgb(170, 255, 0);
+        @include g.var(background-color, wht);
     }
 }
 
@@ -44,8 +42,6 @@
     width: 100%;
     margin: 0;
     overflow: hidden;
-    
-    background-color: rgb(113, 197, 80);
 }
 
 /* This changes color of navigation buttons. */

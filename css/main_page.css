@@ -225,17 +225,29 @@ body {
 
 .articleBox {
   width: 100%;
-  margin: 0;
+  margin: 2em 0 0 0;
   overflow: hidden;
-  background-color: #74b5ff;
 }
 .articleBox .article {
-  outline: #aaff00;
+  background-color: #fffafa;
+  background-color: var(--wht);
 }
 
 .meetingsBox {
   width: 100%;
   margin: 0;
   overflow: hidden;
-  background-color: #71c550;
+}
+
+/* This changes color of navigation buttons. */
+@media screen and (hover: none) and (max-aspect-ratio: 1/1) and (max-device-width: 600px) {
+  .navItem[href*="index.php"] {
+    color: #266297;
+    color: var(--prim-light);
+  }
+
+  .navItem[href*="index.php"] .navIcon {
+    fill: #266297;
+    fill: var(--prim-light);
+  }
 }
