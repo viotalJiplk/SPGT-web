@@ -320,7 +320,7 @@
 		</div>
 
 		<style>
-			@media screen and (hover:none) and (max-aspect-ratio: 1/1) and (max-device-width: 1900px){
+			@media screen and (hover:none) and (max-aspect-ratio: 1/1) and (max-device-width: 600px){
 				.navItem[href*="zasedani.php"]{
 					color: rgb(37, 171, 255);
 				}

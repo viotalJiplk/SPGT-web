@@ -127,7 +127,7 @@
 }
 
 /*Mobile vertical*/
-@media screen and (hover: none) and (max-aspect-ratio: 1/1) and (max-device-width: 1900px) {
+@media screen and (max-device-width: 600px) and (hover: none) and (max-aspect-ratio: 1/1) {
   html {
     font-size: 4vmin;
   }
@@ -172,7 +172,7 @@
   }
 }
 /* Mobile horizontal */
-@media screen and (hover: none) and (min-aspect-ratio: 1/1) and (max-device-width: 1900px) {
+@media screen and (max-device-width: 600px) and (hover: none) and (min-aspect-ratio: 1/1) {
   html {
     font-size: 4vmin;
   }
