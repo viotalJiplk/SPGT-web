@@ -169,18 +169,18 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 90vw;
-    border-left: 6vw solid #f5f5f5;
-    border-right: 6vw solid whitesmoke;
+    width: 100vw;
     box-shadow: 0 -0.1em 0.5em rgba(0, 0, 0, 0.5);
     background-color: whitesmoke;
   }
   body .navWrap .mobileWrap nav {
     font-size: 0.6rem;
     height: 6em;
-    width: 100%;
+    width: 90%;
     justify-content: flex-start;
     overflow: hidden;
+    /* Center bottom mobile nav horizontally */
+    margin: 0 auto;
   }
   body .navWrap .mobileWrap nav a {
     color: #000000;

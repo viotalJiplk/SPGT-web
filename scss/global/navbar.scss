@@ -180,9 +180,7 @@
         position: fixed;
         bottom: 0;
         left: 0;
-        width: 90vw;
-        border-left: 6vw solid #f5f5f5;
-        border-right: 6vw solid whitesmoke;
+        width: 100vw;
 
         box-shadow: 0 -0.1em 0.5em rgba(0, 0, 0, 0.5);
 
@@ -191,9 +189,12 @@
         nav{
             font-size: 0.6rem;
             height: 6em;
-            width: 100%;
+            width: 90%;
             justify-content: flex-start;
             overflow: hidden;
+
+            /* Center bottom mobile nav horizontally */
+            margin: 0 auto;
 
             a{
                 @include g.var(color, blck);
@@ -242,6 +243,19 @@
                 display: flex;
                 justify-content: center;
 
+                nav{
+                    font-size: 1.5em;
+    
+                    overflow-x: auto;
+                    justify-content: flex-start;
+
+                    max-width: max-content;
+    
+                    .navItem{
+                        margin: 0 0.5em;
+                    }
+                }
+
                 /* Maybe we'll add these when we can detect scroll, somehow.
                 .navScrollArrowWrap{
                     height: 3rem;
@@ -280,19 +294,6 @@
                     }
                 }
                 */
-
-                nav{
-                    font-size: 1.5em;
-    
-                    overflow-x: auto;
-                    justify-content: flex-start;
-
-                    max-width: max-content;
-    
-                    .navItem{
-                        margin: 0 0.5em;
-                    }
-                }
             }
         }
     }
