@@ -4,12 +4,13 @@
     z-index: 1000;
     position: sticky;
     top: 0;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    overflow: hidden;
 
-    font-size: 1.25rem;
+    font-size: 1rem;
 
     @include g.var(background-color, primary);
     
@@ -27,13 +28,18 @@
         text-align: center;
     }
 
-    nav{
+    /* Here to hide horizontal scrollbar on mobile devices. */
+    .mobileWrap{
         z-index: 1000;
+        min-width: 60%;
+    }
+
+    nav{
+        width: 100%;
         height: 3em;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        min-width: 60%;
 
         text-transform: uppercase;
         letter-spacing: 0.07em;
@@ -61,8 +67,9 @@
             }
         }
 
+        /* just for mobile vertical */
         .hamburgerButton {
-            width: 25%;
+            min-width: 25%;
             height: 100%;
 
             justify-content: center;
@@ -127,11 +134,11 @@
         bottom: 0;
         width: 100vw;
         height: 100vh;
+        overflow-y: scroll;
 
         text-align: center;
         line-height: 2em;
         text-transform: uppercase;
-        overflow-y: auto;
 
         background-color: rgba(0, 0, 0, 0.836);
 
@@ -169,14 +176,11 @@
         position: static;
     }
 
-    body .navWrap nav {
-        font-size: 0.6rem;
-
+    body .navWrap .mobileWrap {
         position: fixed;
         bottom: 0;
-        display: block;
+        left: 0;
         width: 90vw;
-        height: 6em;
         border-left: 6vw solid #f5f5f5;
         border-right: 6vw solid whitesmoke;
 
@@ -184,20 +188,28 @@
 
         background-color: whitesmoke;
 
-        a{
-            @include g.var(color, blck);
-        }
+        nav{
+            font-size: 0.6rem;
+            height: 6em;
+            width: 100%;
+            justify-content: flex-start;
+            overflow: hidden;
 
-        .navItem{
-            width: 25%;
-
-            .navIcon{
-                display: block;
+            a{
+                @include g.var(color, blck);
+            }
+    
+            .navItem{
+                min-width: 25%;
+    
+                .navIcon{
+                    display: block;
+                }
             }
         }
     }
 
-    body .navWrap nav .hamburgerButton{
+    body .navWrap .mobileWrap nav .hamburgerButton{
         display: flex;
     }
 
@@ -208,7 +220,7 @@
 
 /* Mobile horizontal */
 @media screen /* under 550px -> probably a mobile phone */
-              and (max-device-width: g.$mobile-screen-width)
+              and (max-device-height: g.$mobile-screen-width)
               /* (pointer: coarse) - it isn't just shrunk down pc browser */ 
               and (hover:none)
               /* just to see device rotation */
@@ -219,9 +231,68 @@
 
     body{
         .navWrap{
-            font-size: 1.5vw;
-            nav{
-                font-size: 1.5em;
+            font-size: 0.7em;
+            display: flex;
+            flex-wrap: wrap;
+            position: static;
+            justify-content: space-evenly;
+
+            .mobileWrap{
+                max-width: 100%;
+                display: flex;
+                justify-content: center;
+
+                /* Maybe we'll add these when we can detect scroll, somehow.
+                .navScrollArrowWrap{
+                    height: 3rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .navScrollArrowLeft{
+                        font-size: 2em;
+                        border: solid;
+                        @include g.var(border-color, wht);
+                        border-width: 0 0.12em 0.12em 0;
+                        display: inline-block;
+                        padding: 0.1em;
+
+                        height: 0.15em;
+                        width: 0.15em;
+
+                        transform: rotate(135deg);
+                        margin: 0 0.1em 0 0.3em;
+                    }
+
+                    .navScrollArrowRight{
+                        font-size: 2em;
+                        border: solid;
+                        @include g.var(border-color, wht);
+                        border-width: 0 0.12em 0.12em 0;
+                        display: inline-block;
+                        padding: 0.1em;
+            
+                        height: 0.15em;
+                        width: 0.15em;
+            
+                        transform: rotate(-45deg);
+                        margin: 0 0.3em 0 0.1em;
+                    }
+                }
+                */
+
+                nav{
+                    font-size: 1.5em;
+    
+                    overflow-x: auto;
+                    justify-content: flex-start;
+
+                    max-width: max-content;
+    
+                    .navItem{
+                        margin: 0 0.5em;
+                    }
+                }
             }
         }
     }

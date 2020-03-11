@@ -17,23 +17,27 @@ html {
   font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
   background-color: #eaeaea;
   background-color: var(--background);
+  width: 100vw;
 }
 
 body {
   margin: 0;
+  width: 100vw;
 }
 
 .navWrap {
   z-index: 1000;
   position: sticky;
   top: 0;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 1.25rem;
+  overflow: hidden;
+  font-size: 1rem;
   background-color: #183e60;
   background-color: var(--primary);
+  /* Here to hide horizontal scrollbar on mobile devices. */
 }
 .navWrap ul {
   list-style: none;
@@ -46,15 +50,19 @@ body {
   font-size: 2rem;
   text-align: center;
 }
-.navWrap nav {
+.navWrap .mobileWrap {
   z-index: 1000;
+  min-width: 60%;
+}
+.navWrap nav {
+  width: 100%;
   height: 3em;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  min-width: 60%;
   text-transform: uppercase;
   letter-spacing: 0.07em;
+  /* just for mobile vertical */
 }
 .navWrap nav a {
   font-weight: 600;
@@ -75,7 +83,7 @@ body {
   display: none;
 }
 .navWrap nav .hamburgerButton {
-  width: 25%;
+  min-width: 25%;
   height: 100%;
   justify-content: center;
   align-items: center;
@@ -127,10 +135,10 @@ body {
   bottom: 0;
   width: 100vw;
   height: 100vh;
+  overflow-y: scroll;
   text-align: center;
   line-height: 2em;
   text-transform: uppercase;
-  overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.836);
   transform: scale(0, 1);
   transform-origin: right;
@@ -157,30 +165,35 @@ body {
     position: static;
   }
 
-  body .navWrap nav {
-    font-size: 0.6rem;
+  body .navWrap .mobileWrap {
     position: fixed;
     bottom: 0;
-    display: block;
+    left: 0;
     width: 90vw;
-    height: 6em;
     border-left: 6vw solid #f5f5f5;
     border-right: 6vw solid whitesmoke;
     box-shadow: 0 -0.1em 0.5em rgba(0, 0, 0, 0.5);
     background-color: whitesmoke;
   }
-  body .navWrap nav a {
+  body .navWrap .mobileWrap nav {
+    font-size: 0.6rem;
+    height: 6em;
+    width: 100%;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+  body .navWrap .mobileWrap nav a {
     color: #000000;
     color: var(--blck);
   }
-  body .navWrap nav .navItem {
-    width: 25%;
+  body .navWrap .mobileWrap nav .navItem {
+    min-width: 25%;
   }
-  body .navWrap nav .navItem .navIcon {
+  body .navWrap .mobileWrap nav .navItem .navIcon {
     display: block;
   }
 
-  body .navWrap nav .hamburgerButton {
+  body .navWrap .mobileWrap nav .hamburgerButton {
     display: flex;
   }
 
@@ -189,16 +202,69 @@ body {
   }
 }
 /* Mobile horizontal */
-@media screen and (max-device-width: 600px) and (hover: none) and (min-aspect-ratio: 1/1) {
+@media screen and (max-device-height: 600px) and (hover: none) and (min-aspect-ratio: 1/1) {
   html {
     font-size: 4vmin;
   }
 
   body .navWrap {
-    font-size: 1.5vw;
+    font-size: 0.7em;
+    display: flex;
+    flex-wrap: wrap;
+    position: static;
+    justify-content: space-evenly;
   }
-  body .navWrap nav {
+  body .navWrap .mobileWrap {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Maybe we'll add these when we can detect scroll, somehow.
+    .navScrollArrowWrap{
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .navScrollArrowLeft{
+            font-size: 2em;
+            border: solid;
+            @include g.var(border-color, wht);
+            border-width: 0 0.12em 0.12em 0;
+            display: inline-block;
+            padding: 0.1em;
+
+            height: 0.15em;
+            width: 0.15em;
+
+            transform: rotate(135deg);
+            margin: 0 0.1em 0 0.3em;
+        }
+
+        .navScrollArrowRight{
+            font-size: 2em;
+            border: solid;
+            @include g.var(border-color, wht);
+            border-width: 0 0.12em 0.12em 0;
+            display: inline-block;
+            padding: 0.1em;
+
+            height: 0.15em;
+            width: 0.15em;
+
+            transform: rotate(-45deg);
+            margin: 0 0.3em 0 0.1em;
+        }
+    }
+    */
+  }
+  body .navWrap .mobileWrap nav {
     font-size: 1.5em;
+    overflow-x: auto;
+    justify-content: flex-start;
+    max-width: max-content;
+  }
+  body .navWrap .mobileWrap nav .navItem {
+    margin: 0 0.5em;
   }
 }
 .mainContent {

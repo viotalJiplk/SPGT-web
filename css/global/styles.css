@@ -13,8 +13,10 @@ html {
   font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
   background-color: #eaeaea;
   background-color: var(--background);
+  width: 100vw;
 }
 
 body {
   margin: 0;
+  width: 100vw;
 }

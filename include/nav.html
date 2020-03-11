@@ -3,50 +3,65 @@
         Logoooo
     </div>
 
-    <nav>
-        <a href="/index.php" class="navItem">
-            <svg class="navIcon" xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 24 24" width="3em">
-                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                <path d="M0 0h24v24H0z" fill="none"/>
-            </svg>
-            <div>Domů</div>
-        </a>
-        <a href="/zasedani.php" class="navItem">
-            <svg class="navIcon" xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 24 24" width="3em">
-                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                <path d="M0 0h24v24H0z" fill="none"/>
-            </svg>
-            <div>Zasedání</div>
-        </a>
-        <a href="/articles.php" class="navItem">
-            <svg class="navIcon" xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 24 24" width="3em">
-                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                <path d="M0 0h24v24H0z" fill="none"/>
-            </svg>
-            <div>Články</div>
-        </a>
-        
-        <div class="hamburgerButton">
-            <label for="HBCheckbox" class="HBCheckboxLabel">
-                <div class="HBStripes">
-                    <div></div>
-                    <div class="HBStripe"></div>
-                    <div></div>
-                </div>
-
-                <div>Ostatní</div>
-            </label>
+    <!-- mobileWrap enables me to hide scrollbar on mobile devices -->
+    <div class="mobileWrap">
+        <div class="navScrollArrowWrap">
+            <div class="navScrollArrowLeft"></div>
         </div>
 
-        <a href="/login.php" class="navItem">
-            <div>Přihlásit se</div>
-        </a>
-    </nav>
+        <nav>
+            <a href="/index.php" class="navItem">
+                <svg class="navIcon" xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 24 24" width="3em">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+                <div>Domů</div>
+            </a>
+            <a href="/zasedani.php" class="navItem">
+                <svg class="navIcon" xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 24 24" width="3em">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+                <div>Zasedání</div>
+            </a>
+            <a href="/articles.php" class="navItem">
+                <svg class="navIcon" xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 24 24" width="3em">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+                <div>Články</div>
+            </a>
+            
+            <div class="hamburgerButton">
+                <label for="HBCheckbox" class="HBCheckboxLabel">
+                    <div class="HBStripes">
+                        <div></div>
+                        <div class="HBStripe"></div>
+                        <div></div>
+                    </div>
 
-    <!--
-        Mobile hamburger button content 
-        Has to be here because of z-index.
-    -->
+                    <div>Ostatní</div>
+                </label>
+            </div>
+
+            <a href="/login.php" class="navItem">
+                <div>Přihlásit se</div>
+            </a>
+
+            <a href="/login.php" class="navItem">
+                <div>Test</div>
+            </a>
+        </nav>
+
+        <div class="navScrollArrowWrap">
+            <div class="navScrollArrowRight"></div>
+        </div>
+    </div>
+
+        <!--
+            Mobile hamburger button content 
+            Has to be here because of z-index.
+        -->
     <input id="HBCheckbox" class="HBCheckbox" type="checkbox">
 
     <div class="HBContent">
