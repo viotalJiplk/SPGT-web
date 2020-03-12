@@ -1,111 +1,111 @@
+h3 {
+  margin: 0;
+}
+
+/*device specifications*/
+:root {
+  --primary: #183e60;
+  --prim-light: #266297;
+  --secondary: #fdcc1c;
+  --background: #eaeaea;
+  --blck: #000000;
+  --wht: #fffafa;
+}
+
+html {
+  /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+  font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+  background-color: #eaeaea;
+  background-color: var(--background);
+  width: 100vw;
+}
+
 body {
   margin: 0;
+  width: 100vw;
 }
 
 .navWrap {
   z-index: 1000;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  width: 100%;
-  height: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  width: 100vw;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1.5rem;
-  background-color: #4d85ff;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  font-size: 1rem;
+  background-color: #183e60;
+  background-color: var(--primary);
+  /* Here to hide horizontal scrollbar on mobile devices. */
+}
+.navWrap ul {
+  list-style: none;
+  padding: 0;
+}
+.navWrap a {
+  text-decoration: none;
 }
 .navWrap .logo {
   font-size: 2rem;
   text-align: center;
 }
-.navWrap nav {
+.navWrap .mobileWrap {
   z-index: 1000;
-  height: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   min-width: 60%;
 }
-.navWrap nav ul {
-  list-style: none;
-  padding: 0;
+.navWrap nav {
+  width: 100%;
+  height: 3em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  /* just for mobile vertical */
+}
+.navWrap nav a {
+  font-weight: 600;
+  color: #fdcc1c;
+  color: var(--secondary);
 }
 .navWrap nav .navItem {
-  width: 25%;
+  width: max-content;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   float: left;
+  white-space: nowrap;
 }
 .navWrap nav .navItem .navIcon {
   display: none;
 }
-.navWrap nav a {
-  color: black;
-  text-decoration: none;
-}
 .navWrap nav .hamburgerButton {
-  width: 25%;
+  min-width: 25%;
   height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   float: left;
   display: none;
-  cursor: pointer;
 }
 .navWrap nav .hamburgerButton .HBCheckboxLabel {
   height: 100%;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
 }
 .navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe,
 .navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:before,
 .navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:after {
   background: black;
   height: 0.4em;
-  width: 3em;
+  width: 2.8em;
   border-radius: 0.2em;
   position: relative;
 }
@@ -121,31 +121,42 @@ body {
   bottom: 0.65em;
 }
 .navWrap nav .hamburgerButton .HBStripes {
-  height: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  height: 3em;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-.navWrap nav .hamburgerButton .HBCheckbox {
+.navWrap .HBCheckbox {
   display: none;
 }
-.navWrap nav .hamburgerButton .HBCheckbox:checked + div {
-  display: block;
-}
-.navWrap nav .hamburgerButton .HBContent {
-  display: none;
+.navWrap .HBContent {
+  z-index: 990;
   position: fixed;
   left: 0;
-  bottom: 6em;
+  bottom: 0;
   width: 100vw;
-  height: 85vh;
-  background-color: rgba(0, 0, 0, 0.39);
+  height: 100vh;
+  overflow-y: scroll;
+  text-align: center;
+  line-height: 2em;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.836);
+  transform: scale(0, 1);
+  transform-origin: right;
+  transition: transform 100ms ease-in-out;
+}
+.navWrap .HBContent a {
+  color: white;
+}
+.navWrap .HBContent ul {
+  margin: 5rem 0 7rem 0;
 }
 
-@media screen and (max-aspect-ratio: 1/1) {
+/*Mobile vertical*/
+@media screen and (max-device-width: 600px) and (hover: none) and (max-aspect-ratio: 1/1) {
+  html {
+    font-size: 4vmin;
+  }
+
   body {
     margin: 0 0 6rem;
   }
@@ -154,33 +165,108 @@ body {
     position: static;
   }
 
-  body .navWrap nav {
-    font-size: 1rem;
+  body .navWrap .mobileWrap {
     position: fixed;
     bottom: 0;
-    display: block;
-    width: 100%;
-    height: 6rem;
+    left: 0;
+    width: 90vw;
+    border-left: 6vw solid #f5f5f5;
+    border-right: 6vw solid whitesmoke;
+    box-shadow: 0 -0.1em 0.5em rgba(0, 0, 0, 0.5);
     background-color: whitesmoke;
   }
-  body .navWrap nav .navItem .navIcon {
+  body .navWrap .mobileWrap nav {
+    font-size: 0.6rem;
+    height: 6em;
+    width: 100%;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+  body .navWrap .mobileWrap nav a {
+    color: #000000;
+    color: var(--blck);
+  }
+  body .navWrap .mobileWrap nav .navItem {
+    min-width: 25%;
+  }
+  body .navWrap .mobileWrap nav .navItem .navIcon {
     display: block;
   }
 
-  body .navWrap nav .hamburgerButton {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  body .navWrap .mobileWrap nav .hamburgerButton {
     display: flex;
   }
-}
-html {
-  font-size: 130%;
-}
 
-body {
-  background-color: khaki;
+  .HBCheckbox:checked + div {
+    transform: scale(1, 1);
+  }
 }
+/* Mobile horizontal */
+@media screen and (max-device-height: 600px) and (hover: none) and (min-aspect-ratio: 1/1) {
+  html {
+    font-size: 4vmin;
+  }
 
+  body .navWrap {
+    font-size: 0.7em;
+    display: flex;
+    flex-wrap: wrap;
+    position: static;
+    justify-content: space-evenly;
+  }
+  body .navWrap .mobileWrap {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Maybe we'll add these when we can detect scroll, somehow.
+    .navScrollArrowWrap{
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .navScrollArrowLeft{
+            font-size: 2em;
+            border: solid;
+            @include g.var(border-color, wht);
+            border-width: 0 0.12em 0.12em 0;
+            display: inline-block;
+            padding: 0.1em;
+
+            height: 0.15em;
+            width: 0.15em;
+
+            transform: rotate(135deg);
+            margin: 0 0.1em 0 0.3em;
+        }
+
+        .navScrollArrowRight{
+            font-size: 2em;
+            border: solid;
+            @include g.var(border-color, wht);
+            border-width: 0 0.12em 0.12em 0;
+            display: inline-block;
+            padding: 0.1em;
+
+            height: 0.15em;
+            width: 0.15em;
+
+            transform: rotate(-45deg);
+            margin: 0 0.3em 0 0.1em;
+        }
+    }
+    */
+  }
+  body .navWrap .mobileWrap nav {
+    font-size: 1.5em;
+    overflow-x: auto;
+    justify-content: flex-start;
+    max-width: max-content;
+  }
+  body .navWrap .mobileWrap nav .navItem {
+    margin: 0 0.5em;
+  }
+}
 .mainContent {
   width: 85vw;
   margin: 1rem auto 1rem;
@@ -192,12 +278,23 @@ body {
   margin: 0 auto 0.5em;
   overflow: hidden;
   background-color: snow;
-  -webkit-box-shadow: 0.05em 0.2em 0.3em rgba(0, 0, 0, 0.5);
-          box-shadow: 0.05em 0.2em 0.3em rgba(0, 0, 0, 0.5);
 }
 .zasedani .zasedaniTopWrap {
   overflow: hidden;
-  background-color: lightgray;
+  background-color: #183e60;
+  background-color: var(--primary);
+  color: snow;
+  cursor: pointer;
+}
+.zasedani .zasedaniTopWrap:hover,
+.zasedani .zasedaniTopWrap:focus-within {
+  color: #fdcc1c;
+  color: var(--secondary);
+}
+.zasedani .zasedaniTopWrap:hover .dropdownButton,
+.zasedani .zasedaniTopWrap:focus-within .dropdownButton {
+  border-color: #fdcc1c;
+  border-color: var(--secondary);
 }
 .zasedani .zasedaniTop {
   font-size: 1.5rem;
@@ -210,20 +307,21 @@ body {
   text-align: center;
 }
 .zasedani .zasedaniTop .dropdownButton {
-  border: solid black;
+  border: solid white;
   border-width: 0 0.12em 0.12em 0;
   display: inline-block;
-  padding: 3px;
+  padding: 0.1em;
   height: 0.15em;
   width: 0.15em;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   margin-bottom: 0.11em;
 }
 .zasedani .zasedaniCont {
   display: none;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-between;
   overflow: hidden;
-  margin: 0 1em 1em;
 }
 .zasedani .zasedaniCont h4 {
   margin-top: 0.2em;
@@ -231,21 +329,31 @@ body {
 .zasedani .checkbox {
   display: none;
 }
+.zasedani .checkbox:checked + label .zasedaniTopWrap {
+  color: #fdcc1c;
+  color: var(--secondary);
+}
 .zasedani .checkbox:checked + label + div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
 }
 .zasedani .checkbox:checked + label + div .program, .zasedani .checkbox:checked + label + div .downloads, .zasedani .checkbox:checked + label + div .statistiky {
   margin: 1em 0.7em 0;
 }
 .zasedani .checkbox:checked + label .dropdownButton {
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  border-color: #fdcc1c;
+  border-color: var(--secondary);
+}
+
+/* This changes color of navigation buttons. */
+@media screen and (hover: none) and (max-aspect-ratio: 1/1) and (max-device-width: 600px) {
+  .navItem[href*="zasedani.php"] {
+    color: #266297;
+    color: var(--prim-light);
+  }
+
+  .navItem[href*="zasedani.php"] .navIcon {
+    fill: #266297;
+    fill: var(--prim-light);
+  }
 }

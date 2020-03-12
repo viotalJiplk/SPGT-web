@@ -1,13 +1,4 @@
-@use 'variables' as v;
-@use 'navbar';
-
-html{
-    font-size: 130%;
-}
-
-body{
-    background-color: v.$colortest;
-}
+@use 'global' as g;
 
 .mainContent{
     width: 85vw;
@@ -21,11 +12,21 @@ body{
     overflow: hidden;
     background-color: snow;
     //border-bottom: 0.3em solid black;
-    box-shadow: 0.05em 0.2em 0.3em rgba(0, 0, 0, .5);
 
     .zasedaniTopWrap{
         overflow: hidden;
-        background-color: rgb(211, 211, 211);
+        @include g.var(background-color, primary);
+        color: snow;
+        cursor: pointer;
+    }
+
+    .zasedaniTopWrap:hover,
+    .zasedaniTopWrap:focus-within{
+        @include g.var(color, secondary);
+
+        .dropdownButton{
+            @include g.var(border-color, secondary);
+        }
     }
 
     .zasedaniTop{
@@ -40,10 +41,10 @@ body{
         }
 
         .dropdownButton{
-            border: solid black;
+            border: solid white;
             border-width: 0 0.12em 0.12em 0;
             display: inline-block;
-            padding: 3px;
+            padding: 0.1em;
 
             height: 0.15em;
             width: 0.15em;
@@ -55,8 +56,10 @@ body{
 
     .zasedaniCont{
         display: none;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-between;
         overflow: hidden;
-        margin: 0 1em 1em;
 
         h4{
             margin-top: 0.2em;
@@ -66,11 +69,14 @@ body{
     .checkbox{
         display: none;
 
+        &:checked + label .zasedaniTopWrap{
+            @include g.var(color, secondary);
+        }
+
         &:checked + label + div{
+
+            // animation in JavaScript
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-content: space-between;
 
             .program, .downloads, .statistiky{
                 margin: 1em 0.7em 0;
@@ -79,8 +85,19 @@ body{
 
         &:checked + label .dropdownButton{
             transform: rotate(-135deg);
+            @include g.var(border-color, secondary);
         }
     }
+}
 
+/* This changes color of navigation buttons. */
+@media screen and (hover:none) and (max-aspect-ratio: 1/1) and (max-device-width: g.$mobile-screen-width){
+    .navItem[href*="zasedani.php"]{
+        @include g.var(color, prim-light);
+    }
+
+    .navItem[href*="zasedani.php"] .navIcon{
+        @include g.var(fill, prim-light);
+    }
 }
 

@@ -1,0 +1,23 @@
+/*device specifications*/
+$mobile-screen-width: 600px;
+
+$vars: (
+    /*colors*/
+    primary: #183e60,
+    prim-light: #266297,
+    secondary: #fdcc1c,
+    background: #eaeaea,
+    blck: #000000,
+    wht: #fffafa,
+);
+
+@mixin var($property, $variable) {
+    #{$property}: map-get($vars, $variable);
+    #{$property}: var(--#{$variable});
+}
+
+:root {
+    @each $property, $value in $vars {
+        --#{$property}: #{$value};
+    }
+}

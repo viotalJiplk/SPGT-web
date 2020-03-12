@@ -24,21 +24,38 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <title>SPGT-login</title>
+		<link rel="stylesheet" href="css/signup.css">
     </head>
     <body>
-        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-            <input type="text" value="username" name="username" required/>
-            <input type="password" name="password" required/>
-            <button type="submit">signup</button>
-        </form>
-        <?php
-            if(isset($error)){
-                echo "<p id=\"error\">" . $error . "<p>";
-            }
-            
-            echo $_SESSION["username"];                     //for development
-            echo "<br>";                                    //for development
-            echo $sswordhash;                     //for development
-        ?>
+
+        <?php require 'include/nav.html';?>
+
+        <div class="mainContent">
+            <h3>Vytvořte si účet:</h3>
+
+            <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+                <div>
+                    <span>Uživatelské jméno:</span>
+                    <input class="textInput" type="text" placeholder="jméno" name="username" required/>
+                </div>
+                <div>
+                    <span>Heslo:</span>
+                    <input class="textInput" type="password" placeholder="heslo" name="password" required/>
+                </div>
+                <a href="login.php">Přihlásit se.</a>
+                <button class="inputButton" type="submit">Registrovat se</button>
+            </form>
+            <?php
+                if(isset($error)){
+                    echo "<p id=\"error\">" . $error . "<p>";
+                }
+                
+                echo $_SESSION["username"];                     //for development
+                echo "<br>";                                    //for development
+                echo $sswordhash;                     //for development
+            ?>
+
+        </div>
     </body>
 </html>

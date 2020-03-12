@@ -38,17 +38,37 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <title>SPGT-login</title>
+		<link rel="stylesheet" href="css/login.css">
     </head>
     <body>
-        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-            <input type="text" value="username" name="username" required/>
-            <input type="password" name="password" required/>
-            <button type="submit">Login</button>
-        </form>
-        <?php
-            if(isset($error)){
-                echo "<p id=\"error\">" . $error . "<p>";
-            }
-        ?>
+        <?php require 'include/nav.html';?>
+
+        <div class="mainContent">
+            <h3>Přihlaste se:</h3>
+
+            <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+                <div>
+                    <span>Uživatelské jméno:</span>
+                    <input class="textInput" type="text" placeholder="jméno" name="username" required/>
+                </div>
+                <div>
+                    <span>Heslo:</span>
+                    <input class="textInput" type="password" placeholder="heslo" name="password" required/>
+                </div>
+                <div class="links">
+                    <a href="signup.php">Registrovat se.</a>
+                    <a href="#">Zapomněli jste heslo?</a>
+                </div>
+                <button class="inputButton" type="submit">Přihlásit se</button>
+            </form>
+            <?php
+                if(isset($error)){
+                    echo "<p id=\"error\">" . $error . "<p>";
+                }
+            ?>
+
+        </div>
+
     </body>
 </html>

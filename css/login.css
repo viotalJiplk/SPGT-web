@@ -267,53 +267,62 @@ body {
     margin: 0 0.5em;
   }
 }
-.titleBox {
-  font-size: 0.8rem;
-  width: 100%;
-  height: 90vh;
-  margin: 0;
-  overflow: hidden;
-  background-color: #313131;
-  background-image: url("/images/title_background.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  background-color: white;
+}
+
+.mainContent {
+  font-size: 1.7rem;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-.titleBox .titleBoxText {
-  font-size: 2.5em;
-  color: #cacaca;
-  width: 88vw;
-  margin: 0 6vw;
-  text-align: center;
+.mainContent h3 {
+  margin-bottom: 1.5em;
 }
 
-.articleBox {
+form {
+  width: 80vw;
+  height: 12em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+form div {
   width: 100%;
-  margin: 2em 0 0 0;
-  overflow: hidden;
 }
-.articleBox .article {
-  background-color: #fffafa;
-  background-color: var(--wht);
-}
-
-.meetingsBox {
+form div .textInput {
+  font-size: 100%;
+  display: block;
   width: 100%;
-  margin: 0;
-  overflow: hidden;
+  height: 2em;
+  border: 0.1em solid grey;
 }
-
-/* This changes color of navigation buttons. */
-@media screen and (hover: none) and (max-aspect-ratio: 1/1) and (max-device-width: 600px) {
-  .navItem[href*="index.php"] {
-    color: #266297;
-    color: var(--prim-light);
-  }
-
-  .navItem[href*="index.php"] .navIcon {
-    fill: #266297;
-    fill: var(--prim-light);
-  }
+form .links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+form button {
+  font-size: 130%;
+}
+form .inputButton {
+  background-color: #00b300;
+  align-self: flex-end;
+}
+form a {
+  text-decoration: none;
+  color: #adadad;
 }

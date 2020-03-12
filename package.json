@@ -1,0 +1,25 @@
+{
+  "name": "spgt-web",
+  "version": "1.0.0",
+  "description": "Webpage of SPGT.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viotalJiplk/SPGT-web.git"
+  },
+  "author": "Vojta Varecha, Jan Krehlik, Ondrej Planer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viotalJiplk/SPGT-web/issues"
+  },
+  "homepage": "https://github.com/viotalJiplk/SPGT-web#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "sass": "^1.26.2"
+  }
+}
