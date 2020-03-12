@@ -1,6 +1,5 @@
 # SPGT-web
 github repository for web-SPGT
-
 Zdrojový kód webových stránek školního parlamentu gymnázia Tišnov (SPGT)
 
 ## Todo list
@@ -60,3 +59,4 @@ Ordered
 ## Inspirace
 Nasel jsem nejake pene stranky jinych parlamentu...
 <http://www.gvp.cz/parlament/>
+
