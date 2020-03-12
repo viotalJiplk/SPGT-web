@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <textarea id="1"></textarea>
+        <p>endpoint:</p> 
+        <input type="text" id="3"><br>
+        <button onclick="upload(1,2,3)">upload</button>
+        <span id="2"></span>
+    </body>   
+</html>
+<script>
+function upload(id, result, where){
+  if(document.getElementById(where).value == ""){
+    document.getElementById(result).innerHTML == "<p>pointing on it self</p>";
+    console.log("pointing on it self");
+    return;
+  }
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById(result).innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("POST", document.getElementById(where).value, true);
+  xhttp.send(document.getElementById(id).value);
+}
+</script>
+<style>
+textarea{
+    width: 100%;
+    height: 50%;
+}
+body{
+    height: 100%;
+}
+html{
+    height: 100%;
+}
+button{
+    color:white;
+    cursor: pointer;
+    background-color: #4CAF50;  
+    border: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 15px 32px;
+    border-radius: 15px;
+    box-shadow: 0 9px#999;
+}
+button:hover {
+    background-color: 
+    #3e8e41;
+}
+button:active {
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+</style>

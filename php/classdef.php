@@ -1,4 +1,10 @@
 <?php
+if(!class_exists("notValidinException")){
+    
+    class notValidinException extends Exception{
+    }
+}   
+
 if(!class_exists("InputException")){
         
     class InputException extends Exception{
