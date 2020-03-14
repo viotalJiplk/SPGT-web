@@ -1,35 +1,32 @@
 <?php
+if(!class_exists("Exceptionlong")){
+    class Exceptionlong extends Exception{
+        function __construct(string $e=""){
+            parent::__construct($e);
+        }
+    }
+}
+
 if(!class_exists("notValidinException")){
     
-    class notValidinException extends Exception{
+    class notValidinException extends Exceptionlong{
     }
 }   
 
 if(!class_exists("InputException")){
         
-    class InputException extends Exception{
+    class InputException extends Exceptionlong{
     }
 }    
 
 if(!class_exists("AttrException")){
         
-    class AttrException extends Exception{
+    class AttrException extends Exceptionlong{
     }
 }
 if(!class_exists("dbIOException")){
         
-    class dbIOException extends Exception{
-    }
-}
-
-if(!class_exists("ExceptionHandlerclass")){
-    class ExceptionHandlerclass{
-        public $info;
-        public $details;
-        function SetException($info,$details){
-            $this->info =  $info;
-            $this->details = $details;
-        }
+    class dbIOException extends Exceptionlong{
     }
 }
 ?>
