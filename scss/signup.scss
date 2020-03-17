@@ -1,22 +1,16 @@
 @use 'global';
-
-html{
-    height: 100vh;
-}
+@use 'modules/buttons.scss';
 
 body{
-    height: 100%;
-
     background-color: white;
+    margin: 0;
 }
 
 .mainContent{
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 
     position: absolute;
-    top: 0;
     width: 100vw;
-    height: 100vh;
     
     margin: 0 auto;
     display: flex;
@@ -32,7 +26,7 @@ body{
 form{
 
     width: 80vw;
-    height: 12em;
+    height: 13em;
 
     display: flex;
     flex-direction: column;
@@ -59,13 +53,7 @@ form{
         flex-wrap: wrap;
     }
 
-    button{
-        font-size: 130%;
-    }
-
-    .inputButton{
-        background-color: rgb(0, 179, 0);
-
+    .btn--confirm{
         align-self: flex-end;
     }
 

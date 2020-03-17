@@ -158,12 +158,7 @@
 }
 
 /*Mobile vertical*/
-@media screen /* under 550px -> probably a mobile phone */
-              and (max-device-width: g.$mobile-screen-width)
-              /* (pointer: coarse) - it isn't just shrunk down pc browser */ 
-              and (hover:none)
-              /* just to see device rotation */
-              and (max-aspect-ratio: 1/1){
+@media #{g.$mq-mobile-vertical}{
     html{
         font-size: 4vmin;
     }
@@ -220,12 +215,7 @@
 }
 
 /* Mobile horizontal */
-@media screen /* under 550px -> probably a mobile phone */
-              and (max-device-height: g.$mobile-screen-width)
-              /* (pointer: coarse) - it isn't just shrunk down pc browser */ 
-              and (hover:none)
-              /* just to see device rotation */
-              and (min-aspect-ratio: 1/1){
+@media #{g.$mq-mobile-horizontal} {
     html{
         font-size: 4vmin;
     }

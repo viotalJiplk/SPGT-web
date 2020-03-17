@@ -275,93 +275,25 @@ body {
     margin: 0 0.5em;
   }
 }
-.mainContent {
-  width: 85vw;
-  margin: 1rem auto 1rem;
-  overflow: hidden;
+button {
+  border: none;
 }
 
-.zasedani {
-  width: 90%;
-  margin: 0 auto 0.5em;
-  overflow: hidden;
-  background-color: snow;
-}
-.zasedani .zasedaniTopWrap {
-  overflow: hidden;
-  background-color: #183e60;
-  background-color: var(--primary);
-  color: snow;
+.btn {
+  font-size: 1em;
+  padding: 0.4em;
+  box-shadow: 0 0.3em #999;
+  border-radius: 0.4em;
+  margin-bottom: 0.5em;
   cursor: pointer;
 }
-.zasedani .zasedaniTopWrap:hover,
-.zasedani .zasedaniTopWrap:focus-within {
-  color: #fdcc1c;
-  color: var(--secondary);
-}
-.zasedani .zasedaniTopWrap:hover .dropdownButton,
-.zasedani .zasedaniTopWrap:focus-within .dropdownButton {
-  border-color: #fdcc1c;
-  border-color: var(--secondary);
-}
-.zasedani .zasedaniTop {
-  font-size: 1.5rem;
-  margin: 0.5em 0.5em 0.4em 0.5em;
-}
-.zasedani .zasedaniTop .dropdownButtonWrap {
-  float: right;
-  cursor: pointer;
-  width: 1em;
-  text-align: center;
-}
-.zasedani .zasedaniTop .dropdownButton {
-  border: solid white;
-  border-width: 0 0.12em 0.12em 0;
-  display: inline-block;
-  padding: 0.1em;
-  height: 0.15em;
-  width: 0.15em;
-  transform: rotate(45deg);
-  margin-bottom: 0.11em;
-}
-.zasedani .zasedaniCont {
-  display: none;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: space-between;
-  overflow: hidden;
-}
-.zasedani .zasedaniCont h4 {
-  margin-top: 0.2em;
-}
-.zasedani .checkbox {
-  display: none;
-}
-.zasedani .checkbox:checked + label .zasedaniTopWrap {
-  color: #fdcc1c;
-  color: var(--secondary);
-}
-.zasedani .checkbox:checked + label + div {
-  display: flex;
-}
-.zasedani .checkbox:checked + label + div .program, .zasedani .checkbox:checked + label + div .downloads, .zasedani .checkbox:checked + label + div .statistiky {
-  margin: 1em 0.7em 0;
-}
-.zasedani .checkbox:checked + label .dropdownButton {
-  transform: rotate(-135deg);
-  border-color: #fdcc1c;
-  border-color: var(--secondary);
+
+.btn:active {
+  box-shadow: 0 0.2em #999;
+  transform: translateY(0.1em);
 }
 
-/* This changes color of navigation buttons. */
-@media screen and (hover: none) and (max-aspect-ratio: 1/1) and (max-device-width: 600px) {
-  .navItem[href*="zasedani.php"] {
-    color: #266297;
-    color: var(--prim-light);
-  }
-
-  .navItem[href*="zasedani.php"] .navIcon {
-    fill: #266297;
-    fill: var(--prim-light);
-  }
+.btn--confirm {
+  background-color: #00b300;
+  color: var(--white);
 }

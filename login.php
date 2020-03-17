@@ -60,7 +60,7 @@
                     <a href="signup.php">Registrovat se.</a>
                     <a href="#">Zapomněli jste heslo?</a>
                 </div>
-                <button class="inputButton" type="submit">Přihlásit se</button>
+                <button class="btn btn--confirm" type="submit">Přihlásit se</button>
             </form>
             <?php
                 if(isset($error)){

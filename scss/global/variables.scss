@@ -7,8 +7,9 @@ $vars: (
     prim-light: #266297,
     secondary: #fdcc1c,
     background: #eaeaea,
-    blck: #000000,
-    wht: #fffafa,
+    'black': #000000,
+    'white': rgb(255, 255, 255),
+    'snow': #fffafa,
 );
 
 @mixin var($property, $variable) {
@@ -21,3 +22,18 @@ $vars: (
         --#{$property}: #{$value};
     }
 }
+
+/*Media querries*/
+
+/*
+and (max-device-width: g.$mobile-screen-width) -- under 550px -> probably a mobile phone
+
+and (hover:none) -- it isn't just shrunk down pc browser
+
+and (max-aspect-ratio: 1/1) -- just to see device rotation
+*/
+
+
+$mq-mobile-vertical: 'only screen and (max-device-width: '$mobile-screen-width') and (hover:none) and (max-aspect-ratio: 1/1)';
+
+$mq-mobile-horizontal: 'screen and (max-device-height: '$mobile-screen-width') and (hover:none) and (min-aspect-ratio: 1/1)';

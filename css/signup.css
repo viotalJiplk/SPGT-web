@@ -8,10 +8,19 @@ h3 {
   --prim-light: #266297;
   --secondary: #fdcc1c;
   --background: #eaeaea;
-  --blck: #000000;
-  --wht: #fffafa;
+  --black: #000000;
+  --white: white;
+  --snow: #fffafa;
 }
 
+/*Media querries*/
+/*
+and (max-device-width: g.$mobile-screen-width) -- under 550px -> probably a mobile phone
+
+and (hover:none) -- it isn't just shrunk down pc browser
+
+and (max-aspect-ratio: 1/1) -- just to see device rotation
+*/
 html {
   /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
   font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
@@ -152,7 +161,7 @@ body {
 }
 
 /*Mobile vertical*/
-@media screen and (max-device-width: 600px) and (hover: none) and (max-aspect-ratio: 1/1) {
+@media only screen and (max-device-width: 600px ) and (hover:none) and (max-aspect-ratio: 1/1) {
   html {
     font-size: 4vmin;
   }
@@ -183,7 +192,6 @@ body {
     margin: 0 auto;
   }
   body .navWrap .mobileWrap nav a {
-    color: #000000;
     color: var(--blck);
   }
   body .navWrap .mobileWrap nav .navItem {
@@ -202,7 +210,7 @@ body {
   }
 }
 /* Mobile horizontal */
-@media screen and (max-device-height: 600px) and (hover: none) and (min-aspect-ratio: 1/1) {
+@media screen and (max-device-height: 600px ) and (hover:none) and (min-aspect-ratio: 1/1) {
   html {
     font-size: 4vmin;
   }
@@ -267,21 +275,38 @@ body {
     margin: 0 0.5em;
   }
 }
-html {
-  height: 100vh;
+button {
+  border: none;
+}
+
+.btn {
+  font-size: 1em;
+  padding: 0.4em;
+  box-shadow: 0 0.3em #999;
+  border-radius: 0.4em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+
+.btn:active {
+  box-shadow: 0 0.2em #999;
+  transform: translateY(0.1em);
+}
+
+.btn--confirm {
+  background-color: #00b300;
+  color: var(--white);
 }
 
 body {
-  height: 100%;
   background-color: white;
+  margin: 0;
 }
 
 .mainContent {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   position: absolute;
-  top: 0;
   width: 100vw;
-  height: 100vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -294,7 +319,7 @@ body {
 
 form {
   width: 80vw;
-  height: 12em;
+  height: 13em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -315,11 +340,7 @@ form .links {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-form button {
-  font-size: 130%;
-}
-form .inputButton {
-  background-color: #00b300;
+form .btn--confirm {
   align-self: flex-end;
 }
 form a {

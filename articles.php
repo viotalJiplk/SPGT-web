@@ -8,7 +8,7 @@
 	<body>
 		<?php require 'include/nav.html';?>
 		<div class="main">
-
+			<h1>under construction</h1>
 		</div>
 	</body>
 </html>

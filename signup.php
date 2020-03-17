@@ -44,7 +44,7 @@
                     <input class="textInput" type="password" placeholder="heslo" name="password" required/>
                 </div>
                 <a href="login.php">Přihlásit se.</a>
-                <button class="inputButton" type="submit">Registrovat se</button>
+                <button class="btn btn--confirm" type="submit">Registrovat se</button>
             </form>
             <?php
                 if(isset($error)){

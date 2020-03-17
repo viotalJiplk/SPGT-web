@@ -4,10 +4,19 @@
   --prim-light: #266297;
   --secondary: #fdcc1c;
   --background: #eaeaea;
-  --blck: #000000;
-  --wht: #fffafa;
+  --black: #000000;
+  --white: white;
+  --snow: #fffafa;
 }
 
+/*Media querries*/
+/*
+and (max-device-width: g.$mobile-screen-width) -- under 550px -> probably a mobile phone
+
+and (hover:none) -- it isn't just shrunk down pc browser
+
+and (max-aspect-ratio: 1/1) -- just to see device rotation
+*/
 .navWrap {
   z-index: 1000;
   position: sticky;
@@ -135,7 +144,7 @@
 }
 
 /*Mobile vertical*/
-@media screen and (max-device-width: 600px) and (hover: none) and (max-aspect-ratio: 1/1) {
+@media only screen and (max-device-width: 600px ) and (hover:none) and (max-aspect-ratio: 1/1) {
   html {
     font-size: 4vmin;
   }
@@ -166,7 +175,6 @@
     margin: 0 auto;
   }
   body .navWrap .mobileWrap nav a {
-    color: #000000;
     color: var(--blck);
   }
   body .navWrap .mobileWrap nav .navItem {
@@ -185,7 +193,7 @@
   }
 }
 /* Mobile horizontal */
-@media screen and (max-device-height: 600px) and (hover: none) and (min-aspect-ratio: 1/1) {
+@media screen and (max-device-height: 600px ) and (hover:none) and (min-aspect-ratio: 1/1) {
   html {
     font-size: 4vmin;
   }

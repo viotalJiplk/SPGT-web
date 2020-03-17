@@ -1,0 +1,25 @@
+@use 'scss/global' as g;
+
+button{
+    border: none;
+}
+
+.btn{
+    font-size: 1em;
+    padding: 0.4em;
+    box-shadow: 0 0.3em #999;
+    border-radius: 0.4em;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+}
+
+.btn:active{
+    box-shadow: 0 0.2em #999;
+
+    transform: translateY(0.1em);
+}
+
+.btn--confirm{
+    background-color: rgb(0, 179, 0);
+    @include g.var(color, white);
+}
