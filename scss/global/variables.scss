@@ -26,11 +26,11 @@ $vars: (
 /*Media querries*/
 
 /*
-and (max-device-width: g.$mobile-screen-width) -- under 550px -> probably a mobile phone
+    and (max-device-width: g.$mobile-screen-width) -- under 550px -> probably a mobile phone
 
-and (hover:none) -- it isn't just shrunk down pc browser
+    and (hover:none) -- it isn't just shrunk down pc browser
 
-and (max-aspect-ratio: 1/1) -- just to see device rotation
+    and (max-aspect-ratio: 1/1) -- just to see device rotation
 */
 
 

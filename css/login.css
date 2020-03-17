@@ -15,11 +15,11 @@ h3 {
 
 /*Media querries*/
 /*
-and (max-device-width: g.$mobile-screen-width) -- under 550px -> probably a mobile phone
+    and (max-device-width: g.$mobile-screen-width) -- under 550px -> probably a mobile phone
 
-and (hover:none) -- it isn't just shrunk down pc browser
+    and (hover:none) -- it isn't just shrunk down pc browser
 
-and (max-aspect-ratio: 1/1) -- just to see device rotation
+    and (max-aspect-ratio: 1/1) -- just to see device rotation
 */
 html {
   /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
@@ -308,6 +308,7 @@ body {
   position: absolute;
   top: 0;
   width: 100vw;
+  height: 100vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -347,4 +348,11 @@ form .btn--confirm {
 form a {
   text-decoration: none;
   color: #adadad;
+}
+
+@media screen and (max-device-height: 600px ) and (hover:none) and (min-aspect-ratio: 1/1) {
+  body .mainContent {
+    top: auto;
+    height: auto;
+  }
 }
