@@ -1,4 +1,4 @@
-@use 'global';
+@use 'global' as g;
 @use 'modules/buttons.scss';
 
 body{
@@ -10,7 +10,9 @@ body{
     font-size: 1.5rem;
 
     position: absolute;
+    top: 0;
     width: 100vw;
+    height: 100vh;
     
     margin: 0 auto;
     display: flex;
@@ -61,5 +63,14 @@ form{
         text-decoration: none;
         color: rgb(173, 173, 173);
         align-self: flex-start;
+    }
+}
+
+@media #{g.$mq-mobile-horizontal} {
+    body{
+        .mainContent{
+            top: auto;
+            height: auto;
+        }
     }
 }

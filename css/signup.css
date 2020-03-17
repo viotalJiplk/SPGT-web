@@ -306,7 +306,9 @@ body {
 .mainContent {
   font-size: 1.5rem;
   position: absolute;
+  top: 0;
   width: 100vw;
+  height: 100vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -347,4 +349,11 @@ form a {
   text-decoration: none;
   color: #adadad;
   align-self: flex-start;
+}
+
+@media screen and (max-device-height: 600px ) and (hover:none) and (min-aspect-ratio: 1/1) {
+  body .mainContent {
+    top: auto;
+    height: auto;
+  }
 }
