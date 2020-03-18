@@ -4,6 +4,7 @@
 		<meta charset="UTF-8"/>
 		<title>Zápisy</title>
 		<link rel="stylesheet" href="css/zasedani.css">
+		<link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
 	</head>
 	<body>
 		<?php require 'include/nav.html';?>

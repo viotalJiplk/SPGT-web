@@ -40,6 +40,7 @@
         <meta charset="UTF-8">
         <title>SPGT-login</title>
 		<link rel="stylesheet" href="css/login.css">
+        <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
     </head>
     <body>
         <?php require 'include/nav.html';?>

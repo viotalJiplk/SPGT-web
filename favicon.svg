@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="256px"
+   height="256px"
+   viewBox="0 0 256 256"
+   version="1.1"
+   id="SVGRoot"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="icon_SPGT.svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.0000001"
+     inkscape:cx="125.92519"
+     inkscape:cy="138.80885"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="836"
+     inkscape:window-x="1280"
+     inkscape:window-y="151"
+     inkscape:window-maximized="1"
+     inkscape:grid-bbox="true"
+     inkscape:snap-global="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:object-nodes="false" />
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Vrstva 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:300;font-size:41.16903305px;line-height:1.25;font-family:Lato;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#08257c;fill-opacity:1;stroke:#08257c;stroke-width:10.00000004;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stroke-linecap:round;stroke-linejoin:round;-inkscape-font-specification:'Lato Light';font-stretch:normal;font-variant:normal"
+       x="123.63227"
+       y="145.2618"
+       id="text25"
+       transform="scale(1.0266188,0.97407138)"><tspan
+         sodipodi:role="line"
+         id="tspan23"
+         x="123.63227"
+         y="145.2618"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:76.84886169px;line-height:1;font-family:Lato;-inkscape-font-specification:'Lato Light';text-align:center;text-anchor:middle;fill:#08257c;fill-opacity:1;stroke-width:10.00000004;stroke-miterlimit:4;stroke-dasharray:none;stroke:#08257c;stroke-opacity:1;stroke-linecap:round;stroke-linejoin:round">SP</tspan><tspan
+         sodipodi:role="line"
+         x="123.63227"
+         y="222.16147"
+         id="tspan27"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:76.84886169px;line-height:1;font-family:Lato;-inkscape-font-specification:'Lato Light';text-align:center;text-anchor:middle;fill:#08257c;fill-opacity:1;stroke-width:10.00000004;stroke-miterlimit:4;stroke-dasharray:none;stroke:#08257c;stroke-opacity:1;stroke-linecap:round;stroke-linejoin:round">GT</tspan></text>
+    <rect
+       style="fill:#ffc107;fill-opacity:1;stroke-width:1"
+       id="rect837"
+       width="103.23759"
+       height="6.7175145"
+       x="76.721085"
+       y="73.212898" />
+    <path
+       style="fill:#ffc107;fill-opacity:1;stroke-width:1"
+       d="M 76.367188 49.347656 L 76.367188 58.894531 L 76.367188 65.611328 L 179.60547 65.611328 L 179.60547 58.894531 L 179.60547 49.347656 L 164.92773 49.347656 L 164.92773 58.894531 L 156.33789 58.894531 L 156.33789 49.351562 L 141.66211 49.351562 L 141.66211 58.894531 L 136.08789 58.894531 L 136.08789 49.351562 L 121.41211 49.351562 L 121.41211 58.894531 L 112.58789 58.894531 L 112.58789 49.476562 L 97.912109 49.476562 L 97.912109 58.894531 L 91.044922 58.894531 L 91.044922 49.347656 L 76.367188 49.347656 z "
+       id="rect837-0" />
+  </g>
+</svg>
