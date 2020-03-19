@@ -11,7 +11,7 @@
 		<?php require 'include/nav.html';?>
 		<div class="mainContent">
 
-			<!-- Pure HTML test (will generate with php)-->
+			<!-- Pure HTML test (will generate with js)-->
 			<div class="zasedani">
 
 				<input id="checkbox1" class="checkbox" type="checkbox">
