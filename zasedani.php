@@ -5,21 +5,20 @@
 		<title>Zápisy</title>
 		<link rel="stylesheet" href="css/zasedani.css">
 		<link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
-		<script src="js/zapisy.js"></script>
 	</head>
 	<body>
 		<?php require 'include/nav.html';?>
 		<div class="mainContent">
 
 			<!-- Pure HTML test (will generate with js)-->
-			<div class="zasedani">
+			<div class="zasedani 2020-02-03" id="43">
 
 				<input id="checkbox1" class="checkbox" type="checkbox">
 
 				<label for="checkbox1">
 					<div class="zasedaniTopWrap">
 						<div class="zasedaniTop">
-							<span>Zasedání 12.12.2020</span>
+							<span>Zasedání 3.2.2020</span>
 							<div class="dropdownButtonWrap">
 								<div class="dropdownButton"></div>
 							</div>
@@ -30,14 +29,7 @@
 				<div class="zasedaniCont">
 					<div class="program">
 						<h4>Program Zasedání</h4>
-						<ol>
-							<li>bla bla bla bla bla</li>
-							<li>bla bla bla bla bla</li>
-							<li>bla bla bla bla bla bla bla bla bla bla</li>
-							<li>bla bla bla bla bla</li>
-							<li>bla bla bla bla bla</li>
-							<li>bla bla bla bla bla</li>
-						</ol>
+						<p></p>
 					</div>
 
 					<div class="downloads">
@@ -322,3 +314,4 @@
 		</div>
 	</body>
 </html>
+<script src="js/zapisy.js"></script>

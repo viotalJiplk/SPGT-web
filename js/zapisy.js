@@ -5,7 +5,7 @@ function ajax(url, method, callback, payload){
         if (this.readyState == 4) {
             if(this.status == 200){    
                 if(callback != ""){
-                    callback(this.responseText);
+                    eval(callback + "(\'" + this.responseText + "\')");
                 }else{
                     console.log(this.responseText);
                 }
@@ -17,4 +17,19 @@ function ajax(url, method, callback, payload){
     xhttp.open(method, url , true);
     xhttp.send(payload);
 }
-ajax("/endpoints/zapisy.php","POST","","{\"date\":\"2020-02-03\"}");
+function assign(obj1, obj2){
+    obj2.getElementsByClassName("program")[0].getElementsByTagName("p")[0].innerHTML = obj1.program;
+}
+
+function callbackf(text){
+    var json = JSON.parse(text);
+    console.log(json);
+    var obj = document.getElementById(json[0].id);
+    assign(json[0], obj);
+}
+
+function fill(date){
+    ajax("/endpoints/zapisy.php","POST","callbackf","{\"date\":\""+ date +"\"}");
+}
+
+fill("2020-02-03");
