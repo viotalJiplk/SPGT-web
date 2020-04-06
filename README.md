@@ -57,7 +57,7 @@ Ordered
 1. Some weird easteregg
 
 ## Inspirace
-Nasel jsem nejake pene stranky jinych parlamentu...
-<http://www.gvp.cz/parlament/>
+Nasel jsem nejake pene stranky jinych parlamentu...\
+<http://www.gvp.cz/parlament/>\
 <https://studentsky-parlament-gymnazia-a-sos-hostinne.webnode.cz/>
 
