@@ -29,4 +29,5 @@
 		</div>
 	</body>
 </html>
+<script src="js/fillzapisy.js">
 <script src="js/getzapis.js"></script>
