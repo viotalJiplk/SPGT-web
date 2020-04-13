@@ -29,4 +29,4 @@
 		</div>
 	</body>
 </html>
-<script src="js/zapisy.js"></script>
+<script src="js/getzapis.js"></script>
