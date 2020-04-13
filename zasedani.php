@@ -23,11 +23,11 @@
 						</div>
 					</div>
 				</label>
-				<div class="zasedaniCont">		<!--dyn from callbackf(text)-->
-				</div>
+				<div class="zasedaniCont"></div><!--dyn from callbackf(text)--><!--dont add anything betven <div></div>-->
 			</div>
 		</div>
 	</body>
 </html>
-<script src="js/fillzapisy.js">
+<script src="js/ajax.js"></script>
+<script src="js/fillzapisy.js"></script>
 <script src="js/getzapis.js"></script>
