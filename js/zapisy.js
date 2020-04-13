@@ -36,8 +36,8 @@ function callbackf(text){
     
 }
 
-function fill(date){
-    ajax("/endpoints/zapisy.php","POST","callbackf","{\"date\":\""+ date +"\"}");
+function fill(id){
+    ajax("/endpoints/zapisy.php","POST","callbackf","{\"id\":"+ id +"}");
 }
 
-fill("2020-02-03");
+fill(43);

@@ -9,13 +9,13 @@
         if($payload == NULL){
             throw new notValidinException("no json sent");
         }else{
-            if(isset($payload->date)){
-                $date = $payload->date;
-                if($date != NULL){
-                    if(gettype($date) != "string"){
+            if(isset($payload->id)){
+                $id = $payload->id;
+                if($id != NULL){
+                    if(gettype($id) != "integer"){
                         throw new notValidinException("wrong payload");
                     }
-                    $result = dbio("SELECT * FROM d215865_spgtweb.zapisy WHERE time='$date'",1);
+                    $result = dbio("SELECT * FROM d215865_spgtweb.zapisy WHERE id='$id'",1);
                     echo json_encode($result);
                 }else{
                     throw new notValidinException("wrong payload");
