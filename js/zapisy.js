@@ -37,7 +37,7 @@ function callbackf(text){
 }
 
 function fill(id){
-    ajax("/endpoints/zapisy.php","POST","callbackf","{\"id\":"+ id +"}");
+    if(document.getElementById(id).getElementsByClassName("zasedaniCont")[0].hasChildNodes()){
+        ajax("/endpoints/zapisy.php","POST","callbackf","{\"id\":"+ id +"}");
+    }
 }
-
-fill(43);

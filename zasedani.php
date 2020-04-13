@@ -11,9 +11,9 @@
 		<div class="mainContent">			
 			<div class="zasedani" id="43">		<!-- dyn: id( = id in MYSQL)-->
 
-				<input id="checkbox1" class="checkbox" type="checkbox"> <!-- dyn: checkbox+id( = id in MYSQL)-->
+				<input id="checkbox43" class="checkbox" type="checkbox" onclick="fill(43)"> <!-- dyn: checkbox+id( = id in MYSQL)-->
 
-				<label for="checkbox1">
+				<label for="checkbox43">
 					<div class="zasedaniTopWrap">
 						<div class="zasedaniTop">
 							<span>Zasedání 3.2.2020</span>				<!--dyn Zasedání +time( = time in MYSQL)-->
