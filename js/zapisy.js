@@ -1,3 +1,5 @@
+
+
 function ajax(url, method, callback, payload){
     var xhttp = new XMLHttpRequest();
     url = "http://" + "localhost/viotal/projekty/SPGT-web" + url; //for testing jinak document.root and https://
@@ -17,15 +19,20 @@ function ajax(url, method, callback, payload){
     xhttp.open(method, url , true);
     xhttp.send(payload);
 }
-function assign(obj1, obj2){
-    obj2.getElementsByClassName("program")[0].getElementsByTagName("p")[0].innerHTML = obj1.program;
-}
 
 function callbackf(text){
     var json = JSON.parse(text);
     console.log(json);
-    var obj = document.getElementById(json[0].id);
-    assign(json[0], obj);
+    var obj = document.getElementById(json[0].id).getElementsByClassName("zasedaniCont")[0];
+    var result = json[0];
+    var hlasovani = result.hlasovani;
+    var dochazka = "";
+    var program = result.program;
+    var materialy = result.materialy;
+    var zasedaniCont = "<div class=\"program\"><h4>Program Zasedání</h4>" + program + "</div><div class=\"downloads\"><h4>Ke stažení</h4><button class=\"zapis\">Stáhnout zápis</button><div class=\"materialy\"><h5>Materiály</h5>" + materialy +"</div></div><div class=\"statistiky\"><div class=\"dochazka\"><h4>Docházka</h4>" + dochazka + "</div><div class=\"hlasovani\"><h4>Hlasování</h4>" + hlasovani + "</div></div>";
+    console.log(zasedaniCont);
+    obj.innerHTML = zasedaniCont;
+    
 }
 
 function fill(date){

@@ -27,32 +27,6 @@
 				</label>
 
 				<div class="zasedaniCont">
-					<div class="program">
-						<h4>Program Zasedání</h4>
-						<p></p>
-					</div>
-
-					<div class="downloads">
-						<h4>Ke stažení</h4>
-						<button class="zapis">Stáhnout zápis</button>
-						<div class="materialy">
-							<h5>Materiály</h5>
-							<p>...................</p>
-							<p>...................</p>
-							<p>...................</p>
-						</div>
-					</div>
-
-					<div class="statistiky">
-						<div class="dochazka">
-							<h4>Docházka</h4>
-							<p>Pr, Se, Te, Ka, Ki, 1.A, 1.B, Sx, 2.A, 2.B, Se, 3.A, 3.B, Ok, 4.A, 4.B</p>
-						</div>
-						<div class="hlasovani">
-							<h4>Hlasování</h4>
-							.....................
-						</div>
-					</div>
 				</div>
 			</div>
 
