@@ -1,6 +1,6 @@
 function ajax(url, method, callback, payload){
     var xhttp = new XMLHttpRequest();
-    url = "http://" + "localhost/viotal/projekty/SPGT-web" + url; //for testing jinak document.root and https://
+    url = "http://" + "localhost/vojta/SPGT-web" + url; //for testing jinak document.root and https://
     xhttp.onreadystatechange = function(){
         if (this.readyState == 4) {
             if(this.status == 200){    
