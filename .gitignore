@@ -104,7 +104,7 @@ acs-*.bib
 
 # glossaries
 *.acn
-*.acr
+*.acr (+ 2 944 včera, + 1 247 dnes) 
 *.glg
 *.glo
 *.gls
@@ -274,3 +274,6 @@ TSWLatexianTemp*
 node_modules
 package-lock.json
 package.json
+
+#vscode
+.vscode
