@@ -20,7 +20,8 @@ function compile(){
 
 function watch(){
     browserSync.init({
-        proxy: "spgt"
+        proxy: "spgt",
+        port: 3000,
     });
 
     gulp.watch('./scss/**/*.scss', compile);
