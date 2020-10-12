@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/viotalJiplk/SPGT-web#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.12",
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2",
-    "sass": "^1.26.2"
+    "gulp-sass": "^4.1.0",
+    "sass": "^1.26.11"
   }
 }
