@@ -13,25 +13,31 @@
         }else{
             if(isset($payload->date) & isset($payload->program) & isset($payload->zapis)){
                 if($payload->date != NULL & $payload->program != NULL & $payload->zapis != NULL){
-                    $date = $payload->date;
-                    $program = $payload->program;
-                    $zapis = $payload->zapis;
+                    $param = array();
+                    $param[":created"] = $payload->date;
+                    $param[":program"] = $payload->program;
+                    $param[":zapis"] = $payload->zapis;
+                    //$param[":id"] = "";
 
-                    if((gettype($date) != "string") OR (gettype($program) != "string") OR (gettype($zapis) != "string")){         //to do date format checking
+                    if((gettype($param[":created"]) != "string") OR (gettype($param[":program"]) != "string") OR (gettype($param[":zapis"]) != "string")){         //to do date format checking
                         throw new notValidinException("type of something in payload is incorrect");
                     }
 
-                    $sqlp1 = "INSERT INTO d215865_spgtweb.zapisy (time, program, zapis";
-                    $sqlp2 = ") VALUES('$date', '$program', '$zapis'";
+                    $sql = "INSERT INTO d215865_spgtweb.zapisy(time, program, zapis, materialy, hlasovani) VALUES(:created, :program, :zapis, :materialy, :hlasovani)";
+                    
                     if(isset($payload->materialy)){
-                        $sqlp1 = $sqlp1 . ", materialy";
-                        $sqlp2 = $sqlp2 . ", '" . $payload->materialy . "'";
+                        $param[":materialy"] = $payload->materialy;
+                    }else{
+                        $param[":materialy"] = NULL;
                     }
+
                     if(isset($payload->hlasovani)){
-                        $sqlp1 = $sqlp1 . ", hlasovani";
-                        $sqlp2 = $sqlp2 . ", '" . $payload->hlasovani . "'";
+                        $param[":hlasovani"] = $payload->hlasovani;
+                    }else{
+                        $param[":hlasovani"] = NULL;
                     }
-                    dbio($sqlp1 . $sqlp2 . ")",0);
+
+                    dbio($sql, $param);
                 }else{
                     throw new notValidinException("wrong payload");
                 }

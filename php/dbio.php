@@ -32,7 +32,7 @@ if(!function_exists("dbio")){
             $result = array();
             $i = 0;
 
-            if(preg_match("/^(SELECT)/", $sql)){
+            if(preg_match("/^(SELECT)/", $sql)){                                //pro SELECT získávání výsledků
                 $result = $stmt -> fetchAll();    
             }
             $conn = null;
