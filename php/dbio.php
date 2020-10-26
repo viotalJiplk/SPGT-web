@@ -34,9 +34,9 @@ if(!function_exists("dbio")){
 
             if(preg_match("/^(SELECT)/", $sql)){
                 $result = $stmt -> fetchAll();    
-                return $result;
             }
             $conn = null;
+            return $result;
         }catch(PDOException $e) {                                               //zpracování výjimky databáze
             if($e->errorInfo["1"] == 1062){                                     //username není unikátní
                 throw new InputException("Username not UNIQUE");
