@@ -6,9 +6,15 @@
     try{
         if(!array_key_exists( "username" , $_SESSION)){
             if(array_key_exists ( "username" , $_POST ) && array_key_exists ( "password" , $_POST )){
-                $sswordhash = password_hash($_POST["password"], PASSWORD_DEFAULT);;
-                dbio("INSERT INTO d215865_spgtweb.stdlogin (username, password)VALUES ('$_POST[username]', '$sswordhash');", 0);
-                $_SESSION["username"] = $_POST["username"];
+                if(preg_match("/^[a-zA-Z0-9]+$/", $_POST["username"])){
+                    $sswordhash = password_hash($_POST["password"], PASSWORD_DEFAULT);;
+                    dbio("INSERT INTO d215865_spgtweb.stdlogin (username, password)VALUES (:username, :sswordhash);", array(":username"=>$_POST["username"],":sswordhash" => $sswordhash));
+                    $_SESSION["username"] = $_POST["username"];
+            
+                }else{
+                    throw new InputException("You can only use alphanumeric characters in username");
+                }
+
             }
         }
         if(array_key_exists( "username" , $_SESSION)){
@@ -52,9 +58,9 @@
                     echo "<p id=\"error\">" . $error . "<p>";
                 }
                 
-                echo $_SESSION["username"];                     //for development
-                echo "<br>";                                    //for development
-                echo $sswordhash;                     //for development
+                //echo $_SESSION["username"];                     //for development
+                //echo "<br>";                                    //for development
+                //echo $sswordhash;                     //for development
             ?>
 
         </div>

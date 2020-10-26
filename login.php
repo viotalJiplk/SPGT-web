@@ -7,7 +7,7 @@
     try{
         if(!array_key_exists( "username" , $_SESSION)){
             if(array_key_exists("username" , $_POST) && array_key_exists("password" , $_POST )){
-                $sswordsearch =  dbio("SELECT password FROM d215865_spgtweb.stdlogin WHERE username='$_POST[username]'", 1 );
+                $sswordsearch =  dbio("SELECT password FROM d215865_spgtweb.stdlogin WHERE username = :username", array(":username" => $_POST["username"] ));
                 if(array_key_exists(0, $sswordsearch)){
                     $sswordsearch = $sswordsearch[0]; 
                     if(array_key_exists("password", $sswordsearch)){
