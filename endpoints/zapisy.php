@@ -15,7 +15,7 @@
                     if(gettype($id) != "integer"){
                         throw new notValidinException("wrong payload");
                     }
-                    $result = dbio("SELECT * FROM d215865_spgtweb.zapisy WHERE id='$id'",1);
+                    $result = dbio("SELECT * FROM d215865_spgtweb.zapisy WHERE id=:id", array(":id" => $id));
                     echo json_encode($result);
                 }else{
                     throw new notValidinException("wrong payload");
