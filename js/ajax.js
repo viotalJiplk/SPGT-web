@@ -1,6 +1,6 @@
 function ajax(url, method, callback, payload){
     var xhttp = new XMLHttpRequest();
-    url =  "http://" + location.host + url; //for testing jinak and https://
+    url =  "https://" + location.host + url;
     xhttp.onreadystatechange = function(){
         if (this.readyState == 4) {
             if(this.status == 200){    
