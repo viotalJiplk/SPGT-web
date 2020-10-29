@@ -17,6 +17,7 @@ function foreachzapis(record){
     rec.setAttribute("id", id);
     var result = "<input id=\"checkbox" + id + "\" class=\"checkbox\" type=\"checkbox\" onclick=\"fill("+ id +")\"><label for=\"checkbox"+ id +"\"><div class=\"zasedaniTopWrap\"><div class=\"zasedaniTop\"><span>Zasedání "+ time +"</span><div class=\"dropdownButtonWrap\"><div class=\"dropdownButton\"></div></div></div></div></label><div class=\"zasedaniCont\"></div><!--dyn from callbackf(text)--><!--dont add anything betven <div></div>-->"
     rec.innerHTML = result;
-    root.appendChild(rec)
+    root.appendChild(rec);
 }
-ajax("/endpoints/zapisygetall.php","GET","callbackfall","");
+var nrecords = 100;
+ajax("/endpoints/zapisy.php","POST","callbackfall","{\"startdate\": \"2020-1-8\",\"nrecords\": " + nrecords + "}");

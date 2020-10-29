@@ -16,13 +16,23 @@
                         throw new notValidinException("wrong payload");
                     }
                     $result = dbio("SELECT * FROM d215865_spgtweb.zapisy WHERE id=:id", array(":id" => $id));
-                    echo json_encode($result);
                 }else{
                     throw new notValidinException("wrong payload");
                 }
+            }elseif(isset($payload->startdate) AND isset($payload->enddate)){
+                $result = dbio("SELECT id,time FROM d215865_spgtweb.zapisy WHERE time >= :timestart AND time <= :timeend", array(":timestart" => $payload->startdate, ":timeend" => $payload->enddate));
+            }elseif(isset($payload->nrecords)){
+                if(!isset($payload->offset)){
+                    $payload->offset = 0;
+                }
+                if(gettype($payload->nrecords) != "integer" AND gettype($payload->offset) != "integer"){
+                    throw new notValidinException("nrecords not int");    
+                }
+                $result = dbio("SELECT id, time FROM d215865_spgtweb.zapisy ORDER BY time DESC LIMIT $payload->nrecords OFFSET $payload->offset", array());
             }else{
                 throw new notValidinException("wrong payload");
             }
+            echo json_encode($result);
         }
     }catch(dbIOException $e){                                               //some db exception
         $error = "system exception";

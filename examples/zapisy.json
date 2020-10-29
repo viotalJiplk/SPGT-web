@@ -1,0 +1,18 @@
+[
+    {
+        "nrecords": 2,
+        "offset": 0
+    },
+    { 
+        "comment": "vrátí nejnovější zápisy (jejich id a datum) - počet dle nrecords + nasledujicich n lze získat posunutím offsetu"
+    },
+    
+    {
+        "startdate": "2020-01-08",
+        "enddate": "2020-01-08"
+    },
+
+    {
+        "comment": "vrátí zápisy (jejich id a datum) mezi počátečním a koncovým datem - datum ve tvaru RRRR-MM-DD"
+    }
+]
