@@ -3,7 +3,9 @@
     --primary: #183e60;
     --prim-light: #266297;
     --secondary: #fdcc1c;
-    --background: #3a3a3a;
+    --background: #121212;
+    --white: black;
+    --black: white;
   }
 
   body {
