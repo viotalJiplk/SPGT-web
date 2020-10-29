@@ -9,7 +9,7 @@
         if($payload == NULL){
             throw new notValidinException("no json sent");
         }else{
-            if(isset($payload->id)){
+            if(isset($payload->id)){ //return info of zapis with this id
                 $id = $payload->id;
                 if($id != NULL){
                     if(gettype($id) != "integer"){
@@ -19,9 +19,9 @@
                 }else{
                     throw new notValidinException("wrong payload");
                 }
-            }elseif(isset($payload->startdate) AND isset($payload->enddate)){
+            }elseif(isset($payload->startdate) AND isset($payload->enddate)){ //return all id and date of zapisy between these dates (including that date)
                 $result = dbio("SELECT id,time FROM d215865_spgtweb.zapisy WHERE time >= :timestart AND time <= :timeend", array(":timestart" => $payload->startdate, ":timeend" => $payload->enddate));
-            }elseif(isset($payload->nrecords)){
+            }elseif(isset($payload->nrecords)){ //return all id and date of last nrecord zapisy (shifted by offset)
                 if(!isset($payload->offset)){
                     $payload->offset = 0;
                 }
