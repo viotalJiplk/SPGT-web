@@ -11,8 +11,14 @@
         "startdate": "2020-01-08",
         "enddate": "2020-01-08"
     },
-
     {
         "comment": "vrátí zápisy (jejich id a datum) mezi počátečním a koncovým datem - datum ve tvaru RRRR-MM-DD"
+    },
+    
+    {
+        "id": 4
+    },
+    {
+        "comment": "vrátí informace o daném zápisu"
     }
 ]
