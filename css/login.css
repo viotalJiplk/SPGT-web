@@ -3,6 +3,7 @@ h3 {
 }
 
 /*device specifications*/
+/* Usage: @include g.var(color, secondary); */
 :root {
   --primary: #183e60;
   --prim-light: #266297;
@@ -21,6 +22,22 @@ h3 {
 
     and (max-aspect-ratio: 1/1) -- just to see device rotation
 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #183e60;
+    --prim-light: #266297;
+    --secondary: #fdcc1c;
+    --background: #3a3a3a;
+  }
+
+  body {
+    font-weight: 400;
+  }
+
+  img {
+    filter: brightness(0.8) contrast(1.2);
+  }
+}
 html {
   /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
   font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
