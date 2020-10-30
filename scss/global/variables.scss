@@ -1,6 +1,7 @@
 /*device specifications*/
 $mobile-screen-width: 600px;
 
+/* Usage: @include g.var(color, secondary); */
 $vars: (
     /*colors*/
     primary: #183e60,

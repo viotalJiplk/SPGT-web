@@ -3,6 +3,7 @@ h3 {
 }
 
 /*device specifications*/
+/* Usage: @include g.var(color, secondary); */
 :root {
   --primary: #183e60;
   --prim-light: #266297;
@@ -32,6 +33,15 @@ html {
 body {
   margin: 0;
   width: 100vw;
+}
+
+.elevate1 {
+  filter: brightness(200%);
+  box-shadow: 1em 1em 1em 1em #131313;
+}
+
+.elevate2 {
+  filter: brightness(90%);
 }
 
 .navWrap {
@@ -273,6 +283,24 @@ body {
   }
   body .navWrap .mobileWrap nav .navItem {
     margin: 0 0.5em;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #183e60;
+    --prim-light: #266297;
+    --secondary: #fdcc1c;
+    --background: #121212;
+    --white: black;
+    --black: white;
+  }
+
+  body {
+    font-weight: 400;
+  }
+
+  img {
+    filter: brightness(0.8) contrast(1.2);
   }
 }
 button {

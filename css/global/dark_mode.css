@@ -1,0 +1,18 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #183e60;
+    --prim-light: #266297;
+    --secondary: #fdcc1c;
+    --background: #121212;
+    --white: black;
+    --black: white;
+  }
+
+  body {
+    font-weight: 400;
+  }
+
+  img {
+    filter: brightness(0.8) contrast(1.2);
+  }
+}

@@ -1,4 +1,5 @@
 /*device specifications*/
+/* Usage: @include g.var(color, secondary); */
 :root {
   --primary: #183e60;
   --prim-light: #266297;
