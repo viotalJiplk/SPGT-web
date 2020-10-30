@@ -10,6 +10,9 @@ Zdrojový kód webových stránek školního parlamentu gymnázia Tišnov (SPGT)
 1. optmalizace pro pěkný score na lighthouse
 1. Dodělat robot.txt
 
+## todo před produkční verzí
+1. spustit service workera (kód v enablesw.php)
+
 ## truktura
 Ordered
 
