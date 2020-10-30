@@ -1,6 +1,7 @@
 <?php
     include(dirname(__DIR__)."/php/dbio.php");                     //the location will be found even when this file (zapisy.php) was included
     include(dirname(__DIR__)."/php/classdef.php");
+    include(dirname(__DIR__)."/php/helper.php");
 
     header("Content-type: application/json");
 
@@ -15,8 +16,8 @@
                 if($payload->date != NULL & $payload->program != NULL & $payload->zapis != NULL){
                     $param = array();
                     $param[":created"] = $payload->date;
-                    $param[":program"] = $payload->program;
-                    $param[":zapis"] = $payload->zapis;
+                    $param[":program"] = escapehtml(array(), $payload->program);
+                    $param[":zapis"] = escapehtml(array(), $payload->zapis);
                     //$param[":id"] = "";
 
                     if((gettype($param[":created"]) != "string") OR (gettype($param[":program"]) != "string") OR (gettype($param[":zapis"]) != "string")){         //to do date format checking
@@ -26,7 +27,7 @@
                     $sql = "INSERT INTO d215865_spgtweb.zapisy(time, program, zapis, materialy, hlasovani) VALUES(:created, :program, :zapis, :materialy, :hlasovani)";
                     
                     if(isset($payload->materialy)){
-                        $param[":materialy"] = $payload->materialy;
+                        $param[":materialy"] = escapehtml(array(),$payload->materialy);
                     }else{
                         $param[":materialy"] = NULL;
                     }
