@@ -10,24 +10,10 @@ self.addEventListener("install", event => {
                 "/js/ajax.js",
                 "/js/fillzapisy.js",
                 "/js/getzapis.js"
-            ]);
+            ]);//here should be added all css files
         })
     );
 });
-
-// self.addEventListener('activate', (event) => {
-//     var cacheKeeplist = ['spgt-v'];
-
-//     event.waitUntil(
-//       caches.keys().then((keyList) => {
-//         return Promise.all(keyList.map((key) => {
-//           if (cacheKeeplist.indexOf(key) === -1) {
-//             return caches.delete(key);
-//           }
-//         }));
-//       })
-//     );
-//   });
 
 self.addEventListener('fetch', (event) => {
     event.respondWith(
