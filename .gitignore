@@ -276,4 +276,5 @@ package-lock.json
 package.json
 
 #vscode
-.vscode
+.vscode/
+adm/test
