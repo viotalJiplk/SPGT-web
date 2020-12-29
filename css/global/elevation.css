@@ -1,8 +1,9 @@
-.elevate1 {
+.elevation1 {
   filter: brightness(200%);
-  box-shadow: 1em 1em 1em 1em #131313;
+  box-shadow: 0.2em 0.2em 0.2em 0.2em #131313;
 }
 
-.elevate2 {
-  filter: brightness(90%);
+.elevation2 {
+  filter: brightness(300%);
+  box-shadow: 0.2em 0.2em 0.2em 0.2em #131313;
 }

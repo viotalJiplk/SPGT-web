@@ -1,7 +1,3 @@
-h3 {
-  margin: 0;
-}
-
 /*device specifications*/
 /* Usage: @include g.var(color, secondary); */
 :root {
@@ -22,6 +18,14 @@ h3 {
 
     and (max-aspect-ratio: 1/1) -- just to see device rotation
 */
+* {
+  color: var(--black);
+}
+
+h3 {
+  margin: 0;
+}
+
 html {
   /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
   font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
@@ -35,13 +39,14 @@ body {
   width: 100vw;
 }
 
-.elevate1 {
+.elevation1 {
   filter: brightness(200%);
-  box-shadow: 1em 1em 1em 1em #131313;
+  box-shadow: 0.2em 0.2em 0.2em 0.2em #131313;
 }
 
-.elevate2 {
-  filter: brightness(90%);
+.elevation2 {
+  filter: brightness(300%);
+  box-shadow: 0.2em 0.2em 0.2em 0.2em #131313;
 }
 
 .navWrap {
@@ -303,15 +308,9 @@ body {
     filter: brightness(0.8) contrast(1.2);
   }
 }
-/* This changes color of navigation buttons. */
-@media screen and (hover: none) and (max-aspect-ratio: 1/1) and (max-device-width: 600px) {
-  .navItem[href*="index.php"] {
-    color: #266297;
-    color: var(--prim-light);
-  }
-
-  .navItem[href*="index.php"] .navIcon {
-    fill: #266297;
-    fill: var(--prim-light);
-  }
+#box {
+  width: 5rem;
+  height: 5rem;
+  background-color: #183e60;
+  background-color: var(--primary);
 }

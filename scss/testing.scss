@@ -1,13 +1,11 @@
 @use 'global' as g;
 
-
-/* This changes color of navigation buttons. */
-@media screen and (hover:none) and (max-aspect-ratio: 1/1) and (max-device-width: g.$mobile-screen-width){
-    .navItem[href*="index.php"]{
-        @include g.var(color, prim-light);
-    }
-
-    .navItem[href*="index.php"] .navIcon{
-        @include g.var(fill, prim-light);
-    }
+#box{
+    width: 5rem;
+    height: 5rem;
+    @include g.var(background-color, primary);
 }
+
+// #box:hover{
+//     filter: brightness(200%);
+// }

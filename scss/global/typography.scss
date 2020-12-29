@@ -1,3 +1,9 @@
+@use 'variables' as v;
+
+*{
+    @include v.var(color,black);
+}
+
 h3{
     margin: 0;
 }
