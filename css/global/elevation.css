@@ -1,9 +1,197 @@
 .elevation1 {
-  filter: brightness(200%);
-  box-shadow: 0.2em 0.2em 0.2em 0.2em #131313;
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation1::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.05);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation1 > * {
+  position: relative;
+  z-index: 1;
 }
 
 .elevation2 {
-  filter: brightness(300%);
-  box-shadow: 0.2em 0.2em 0.2em 0.2em #131313;
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation2::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.07);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation2 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.elevation3 {
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation3::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.08);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation3 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.elevation4 {
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation4::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.09);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation4 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.elevation5 {
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation5::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.11);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation5 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.elevation6 {
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation6::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.12);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation6 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.elevation7 {
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation7::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.14);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation7 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.elevation8 {
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation8::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.15);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation8 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.elevation9 {
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation9::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.16);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation9 > * {
+  position: relative;
+  z-index: 1;
 }

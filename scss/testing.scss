@@ -3,7 +3,7 @@
 #box{
     width: 5rem;
     height: 5rem;
-    @include g.var(background-color, primary);
+    @include g.var(background-color, surface);
 }
 
 // #box:hover{

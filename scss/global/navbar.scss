@@ -1,4 +1,4 @@
-@use 'variables' as g;
+@use 'variables' as v;
 
 .navWrap{
     z-index: 1000;
@@ -12,7 +12,7 @@
 
     font-size: 1rem;
 
-    @include g.var(background-color, primary);
+    @include v.var(background-color, primary);
     
     ul {
         list-style: none;
@@ -46,7 +46,6 @@
 
         a{
             font-weight: 600;
-            @include g.var(color, secondary);
         }
 
         .navItem {
@@ -61,6 +60,8 @@
             float: left;
 
             white-space: nowrap;
+
+            @include v.var(color, secondary);
 
             .navIcon{
                 display: none;
@@ -140,14 +141,16 @@
         line-height: 2em;
         text-transform: uppercase;
 
-        background-color: rgba(0, 0, 0, 0.836);
+        @include v.var(background-color, on-surface);
 
         transform: scale(0, 1);
         transform-origin: right;
         transition: transform 100ms ease-in-out;
 
+        @include v.var(color, on-surface);
+
         a{
-            color: white;
+            @include v.var(color, on-background);
         }
 
         ul{
@@ -158,7 +161,7 @@
 }
 
 /*Mobile vertical*/
-@media #{g.$mq-mobile-vertical}{
+@media #{v.$mq-mobile-vertical}{
     html{
         font-size: 4vmin;
     }
@@ -179,7 +182,7 @@
 
         box-shadow: 0 -0.1em 0.5em rgba(0, 0, 0, 0.5);
 
-        background-color: whitesmoke;
+        @include v.var(background-color, surface);
 
         nav{
             font-size: 0.6rem;
@@ -192,7 +195,7 @@
             margin: 0 auto;
 
             a{
-                @include g.var(color, blck);
+                @include v.var(color, blck);
             }
     
             .navItem{
@@ -215,7 +218,7 @@
 }
 
 /* Mobile horizontal */
-@media #{g.$mq-mobile-horizontal} {
+@media #{v.$mq-mobile-horizontal} {
     html{
         font-size: 4vmin;
     }

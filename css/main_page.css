@@ -2,9 +2,15 @@
 /* Usage: @include g.var(color, secondary); */
 :root {
   --primary: #183e60;
-  --prim-light: #266297;
+  --prim-light: #48688e;
+  --primary-dark: #001836;
   --secondary: #fdcc1c;
+  --secondary-lighl: #ffff5a;
+  --secondary-dark: #c59c00;
+  --surface: #ffffff;
+  --on-surface: #000000;
   --background: #eaeaea;
+  --on-background: #ffffff;
   --black: #000000;
   --white: white;
   --snow: #fffafa;
@@ -18,7 +24,7 @@
 
     and (max-aspect-ratio: 1/1) -- just to see device rotation
 */
-* {
+p {
   color: var(--black);
 }
 
@@ -40,13 +46,201 @@ body {
 }
 
 .elevation1 {
-  filter: brightness(200%);
-  box-shadow: 0.2em 0.2em 0.2em 0.2em #131313;
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation1::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.05);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation1 > * {
+  position: relative;
+  z-index: 1;
 }
 
 .elevation2 {
-  filter: brightness(300%);
-  box-shadow: 0.2em 0.2em 0.2em 0.2em #131313;
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation2::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.07);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation2 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.elevation3 {
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation3::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.08);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation3 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.elevation4 {
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation4::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.09);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation4 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.elevation5 {
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation5::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.11);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation5 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.elevation6 {
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation6::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.12);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation6 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.elevation7 {
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation7::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.14);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation7 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.elevation8 {
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation8::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.15);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation8 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.elevation9 {
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.801);
+  position: relative;
+}
+.elevation9::after {
+  /* overlay intensity */
+  background-color: rgba(255, 255, 255, 0.16);
+  /* just positioning */
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.elevation9 > * {
+  position: relative;
+  z-index: 1;
 }
 
 .navWrap {
@@ -90,8 +284,6 @@ body {
 }
 .navWrap nav a {
   font-weight: 600;
-  color: #fdcc1c;
-  color: var(--secondary);
 }
 .navWrap nav .navItem {
   width: max-content;
@@ -102,6 +294,8 @@ body {
   flex-direction: column;
   float: left;
   white-space: nowrap;
+  color: #fdcc1c;
+  color: var(--secondary);
 }
 .navWrap nav .navItem .navIcon {
   display: none;
@@ -163,13 +357,17 @@ body {
   text-align: center;
   line-height: 2em;
   text-transform: uppercase;
-  background-color: rgba(0, 0, 0, 0.836);
+  background-color: #000000;
+  background-color: var(--on-surface);
   transform: scale(0, 1);
   transform-origin: right;
   transition: transform 100ms ease-in-out;
+  color: #000000;
+  color: var(--on-surface);
 }
 .navWrap .HBContent a {
-  color: white;
+  color: #ffffff;
+  color: var(--on-background);
 }
 .navWrap .HBContent ul {
   margin: 5rem 0 7rem 0;
@@ -195,7 +393,8 @@ body {
     left: 0;
     width: 100vw;
     box-shadow: 0 -0.1em 0.5em rgba(0, 0, 0, 0.5);
-    background-color: whitesmoke;
+    background-color: #ffffff;
+    background-color: var(--surface);
   }
   body .navWrap .mobileWrap nav {
     font-size: 0.6rem;
@@ -296,8 +495,9 @@ body {
     --prim-light: #266297;
     --secondary: #fdcc1c;
     --background: #121212;
+    --surface: #121212;
     --white: black;
-    --black: white;
+    --black: #e9e9e9;
   }
 
   body {
@@ -348,12 +548,12 @@ body {
 /* This changes color of navigation buttons. */
 @media screen and (hover: none) and (max-aspect-ratio: 1/1) and (max-device-width: 600px) {
   .navItem[href*="index.php"] {
-    color: #266297;
+    color: #48688e;
     color: var(--prim-light);
   }
 
   .navItem[href*="index.php"] .navIcon {
-    fill: #266297;
+    fill: #48688e;
     fill: var(--prim-light);
   }
 }

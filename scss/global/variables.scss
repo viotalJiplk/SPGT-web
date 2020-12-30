@@ -1,18 +1,27 @@
 /*device specifications*/
 $mobile-screen-width: 600px;
 
-/* Usage: @include g.var(color, secondary); */
 $vars: (
-    /*colors*/
+    /* default colors light theme */
     primary: #183e60,
-    prim-light: #266297,
+    prim-light: #48688e,
+    primary-dark: #001836,
     secondary: #fdcc1c,
+    secondary-lighl: #ffff5a,
+    secondary-dark: #c59c00,
+
+    surface: #ffffff,
+    on-surface: #000000,
+
     background: #eaeaea,
+    on-background: #ffffff,
+
     'black': #000000,
     'white': rgb(255, 255, 255),
     'snow': #fffafa,
 );
 
+/* Usage: @include g.var(color, secondary); */
 @mixin var($property, $variable) {
     #{$property}: map-get($vars, $variable);
     #{$property}: var(--#{$variable});

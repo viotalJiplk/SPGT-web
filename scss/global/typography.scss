@@ -1,6 +1,6 @@
 @use 'variables' as v;
 
-*{
+p{
     @include v.var(color,black);
 }
 
