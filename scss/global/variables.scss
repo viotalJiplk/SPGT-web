@@ -4,17 +4,63 @@ $mobile-screen-width: 600px;
 $vars: (
     /* default colors light theme */
     primary: #183e60,
-    prim-light: #48688e,
+    on-primary: #fdcc1c,
+    on-primary-2: hsla(47, 98%, 55%, 0.87),
+    on-primary-disabled: hsla(47, 98%, 55%, 0.60),
+    
+    primary-light: #48688e,
+    on-primary-light: #000000,
+    on-primary-light-2: hsla(0, 0%, 0%, 0.87),
+    on-primary-light-disabled: rgba(0, 0, 0, 0.6),
+
     primary-dark: #001836,
+    on-primary-dark: #ffffff,
+    on-primary-dark-2: hsla(0, 0%, 100%, 0.87),
+    on-primary-dark-disabled: rgba(255, 255, 255, 0.6),
+
+
     secondary: #fdcc1c,
-    secondary-lighl: #ffff5a,
+    on-secondary: #000000,
+    on-secondary-2: hsla(0, 0%, 0%, 0.87),
+    on-secondary-disabled: rgba(0, 0, 0, 0.6),
+
+    secondary-light: #ffff5a,
+    on-secondary-light: #000000,
+    on-secondary-light-2: hsla(0, 0%, 0%, 0.87),
+    on-secondary-light-disabled: rgba(0, 0, 0, 0.6),
+
     secondary-dark: #c59c00,
+    on-secondary-dark: #000000,
+    on-secondary-dark-2: hsla(0, 0%, 0%, 0.87),
+    on-secondary-dark-disabled: rgba(0, 0, 0, 0.6),
+
 
     surface: #ffffff,
     on-surface: #000000,
+    on-surface-2: hsla(0, 0%, 0%, 0.87),
+    on-surface-disabled: rgba(0, 0, 0, 0.6),
 
     background: #eaeaea,
-    on-background: #ffffff,
+    on-background: #000000,
+    on-background-2: hsla(0, 0%, 0%, 0.87),
+    on-background-disabled: rgba(0, 0, 0, 0.6),
+
+
+    error: #CF6679,
+    on-error: rgb(0, 0, 0),
+    on-error-2: hsla(0, 0%, 0%, 0.87),
+    on-error-disabled: rgba(0, 0, 0, 0.6),
+
+    success: #4caf50,
+    on-success: rgb(0, 0, 0),
+    on-success-2: hsla(0, 0%, 0%, 0.87),
+    on-success-disabled: rgba(0, 0, 0, 0.6),
+
+    caution: #f9a825,
+    on-caution: rgb(0, 0, 0),
+    on-caution-2: hsla(0, 0%, 0%, 0.87),
+    on-caution-disabled: rgba(0, 0, 0, 0.6),
+
 
     'black': #000000,
     'white': rgb(255, 255, 255),

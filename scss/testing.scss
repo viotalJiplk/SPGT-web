@@ -1,10 +1,41 @@
 @use 'global' as g;
 
-#box{
-    width: 5rem;
-    height: 5rem;
-    @include g.var(background-color, surface);
+.main-content{
+    background-color: brown;
+    @include g.var(background-color, background);
+    @include g.var(color, on-background);
 }
+
+.box{
+    width: 10rem;
+    height: 5rem;
+}
+
+.primary{
+    @include g.var(background-color, primary);
+
+    &--light{
+        @include g.var(background-color, primary-light);
+    }
+
+    &--dark{
+        @include g.var(background-color, primary-dark);
+    }
+}
+
+.secondary{
+    @include g.var(background-color, secondary);
+
+    &--light{
+        @include g.var(background-color, secondary-light)
+    }
+
+    &--dark{
+        @include g.var(background-color, secondary-dark)
+    }
+}
+
+
 
 // #box:hover{
 //     filter: brightness(200%);

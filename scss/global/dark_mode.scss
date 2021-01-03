@@ -1,21 +1,189 @@
 @media (prefers-color-scheme: dark) {
     :root {
-        --primary: #183e60;
-        --prim-light: #266297;
-        --secondary: #fdcc1c;
+        --test: hsl(208, 61%, 24%);
+        --test2: rgb(72, 104, 142);
 
-        --background: #121212;
-        --surface: #121212;
+        --test3: rgb(24, 64, 99);
+        --test4: rgb(66, 142, 209);
 
-        --white: black;
-        --black: #e9e9e9;
-    }
+        color-scheme: dark light;
+
+        //will need to be set earlier as well for light themes
+        --text-opacity: 0.87;
+        --text-2-opacity: 0.60;
+        --text-disabled-opacity: 0.38;
+
+        --lighten-percentage: 30%;
+        --darken-percentage: 15%;
+
+        --primary-h: 208;
+        --primary-s: 61%;
+        --primary-l: 24%;
+        --primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+        --on-primary: #fdcc1c;
+        --on-primary-2: hsla(47, 98%, 55%, 0.87);
+        --on-primary-disabled: hsla(47, 98%, 55%, 0.60);
+
+        // #48688e
+        --primary-light-h: var(--primary-h);
+        --primary-light-s: var(--primary-s);
+        --primary-light-l: calc(var(--primary-l) + var(--lighten-percentage));
+        --primary-light: hsl(var(--primary-light-h), var(--primary-light-s), var(--primary-light-l));
+        --on-primary-light: #000000;
+        --on-primary-light-2: hsla(0, 0%, 0%, 0.87);
+        --on-primary-light-disabled: rgba(0, 0, 0, 0.6);
     
-    body {
-        font-weight: 400;
-    }
-
-    img {
-        filter: brightness(.8) contrast(1.2);
+        // #001836
+        --primary-dark-h: var(--primary-h);
+        --primary-dark-l: calc(var(--primary-l) - var(--darken-percentage));
+        --primary-dark-s: var(--primary-s);
+        --primary-dark: hsl(var(--primary-dark-h), var(--primary-dark-s), var(--primary-dark-l));
+        --on-primary-dark: #ffffff;
+        --on-primary-2: hsla(0, 0%, 100%, 0.87);
+        --on-primary-disabled: rgba(255, 255, 255, 0.6);
+    
+    
+        --secondary: #fdcc1c;
+        --on-secondary: #000000;
+        --on-secondary-2: hsla(0, 0%, 0%, 0.87);
+        --on-secondary-disabled: rgba(0, 0, 0, 0.6);
+    
+        --secondary-light: #ffff5a;
+        --on-secondary-light: #000000;
+        --on-secondary-light-2: hsla(0, 0%, 0%, 0.87);
+        --on-secondary-light-disabled: rgba(0, 0, 0, 0.6);
+    
+        --secondary-dark: #c59c00;
+        --on-secondary-dark: #000000;
+        --on-secondary-2: hsla(0, 0%, 0%, 0.87);
+        --on-secondary-disabled: rgba(0, 0, 0, 0.6);
+    
+    
+        --surface: #121212;
+        --on-surface: #000000;
+        --on-surface-2: hsla(0, 0%, 0%, 0.87);
+        --on-surface-disabled: rgba(0, 0, 0, 0.6);
+    
+        --background: #121212;
+        --on-background: #000000;
+        --on-background-2: hsla(0, 0%, 0%, 0.87);
+        --on-background-disabled: rgba(0, 0, 0, 0.6);
+    
+    
+        --error: #CF6679;
+        --on-error: rgb(0, 0, 0);
+        --on-error-2: hsla(0, 0%, 0%, 0.87);
+        --on-error-disabled: rgba(0, 0, 0, 0.6);
+    
+        --success: #4caf50;
+        --on-success: rgb(0, 0, 0);
+        --on-success-2: hsla(0, 0%, 0%, 0.87);
+        --on-success-disabled: rgba(0, 0, 0, 0.6);
+    
+        --caution: #f9a825;
+        --on-caution: rgb(0, 0, 0);
+        --on-caution-2: hsla(0, 0%, 0%, 0.87);
+        --on-caution-disabled: rgba(0, 0, 0, 0.6);
     }
 }
+
+.light-mode{
+    --background: #eaeaea;
+    --on-background: #000000;
+    --on-background-2: hsla(0, 0%, 0%, 0.87);
+    --on-background-disabled: rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode{
+    --background: #121212;
+    --on-background: hsla(0, 0%, 100%, 0.87);
+    --on-background-2: hsla(0, 0%, 100%, 0.6);
+    --on-background-disabled: rgba(255, 255, 255, 0.38);
+}
+
+.red-mode{
+
+}
+
+.green-mode{
+
+}
+
+.pink-mode{
+
+}
+
+body {
+    font-weight: 400;
+}
+
+img {
+    filter: brightness(.8) contrast(1.2);
+}
+
+/*
+ --text-opacity: 0.87;
+        --text-2-opacity: 0.60;
+        --text-disabled-opacity: 0.38;
+
+        --primary-h: 208;
+        --primary-l: 60%;
+        --primary-s: 24%;
+        --primary: hsl(208, 60%, 24%);
+        --on-primary: #fdcc1c;
+        --on-primary-2: hsla(47, 98%, 55%, 0.87);
+        --on-primary-disabled: hsla(47, 98%, 55%, 0.60);
+
+        --primary-light: #48688e;
+        --on-primary-light: #000000;
+        --on-primary-2: hsla(0, 0%, 0%, 0.87);
+        --on-primary-disabled: rgba(0, 0, 0, 0.6);
+    
+        --primary-dark: #001836;
+        --on-primary-dark: #ffffff;
+        --on-primary-2: hsla(0, 0%, 100%, 0.87);
+        --on-primary-disabled: rgba(255, 255, 255, 0.6);
+    
+    
+        --secondary: #fdcc1c;
+        --on-secondary: #000000;
+        --on-secondary-2: hsla(0, 0%, 0%, 0.87);
+        --on-secondary-disabled: rgba(0, 0, 0, 0.6);
+    
+        --secondary-lighl: #ffff5a;
+        --on-secondary-light: #000000;
+        --on-secondary-2: hsla(0, 0%, 0%, 0.87);
+        --on-secondary-disabled: rgba(0, 0, 0, 0.6);
+    
+        --secondary-dark: #c59c00;
+        --on-secondary-dark: #000000;
+        --on-secondary-2: hsla(0, 0%, 0%, 0.87);
+        --on-secondary-disabled: rgba(0, 0, 0, 0.6);
+    
+    
+        --surface: #ffffff;
+        --on-surface: #000000;
+        --on-surface-2: hsla(0, 0%, 0%, 0.87);
+        --on-surface-disabled: rgba(0, 0, 0, 0.6);
+    
+        --background: #eaeaea;
+        --on-background: #000000;
+        --on-background-2: hsla(0, 0%, 0%, 0.87);
+        --on-background-disabled: rgba(0, 0, 0, 0.6);
+    
+    
+        --error: #CF6679;
+        --on-error: rgb(0, 0, 0);
+        --on-error-2: hsla(0, 0%, 0%, 0.87);
+        --on-error-disabled: rgba(0, 0, 0, 0.6);
+    
+        --success: #4caf50,
+        --on-success: rgb(0, 0, 0);
+        --on-success-2: hsla(0, 0%, 0%, 0.87);
+        --on-success-disabled: rgba(0, 0, 0, 0.6);
+    
+        --caution: #f9a825;
+        --on-caution: rgb(0, 0, 0);
+        --on-caution-2: hsla(0, 0%, 0%, 0.87);
+        --on-caution-disabled: rgba(0, 0, 0, 0.6);
+*/

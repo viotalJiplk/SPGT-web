@@ -1,9 +1,5 @@
 @use 'variables' as v;
 
-p{
-    @include v.var(color,black);
-}
-
 h3{
     margin: 0;
 }

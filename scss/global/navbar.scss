@@ -1,19 +1,20 @@
 @use 'variables' as v;
-
-.navWrap{
+.topBar{
     z-index: 1000;
     position: sticky;
     top: 0;
     width: 100vw;
+    height: 4em;
     display: flex;
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
+    flex-wrap: nowrap;
 
     font-size: 1rem;
 
     @include v.var(background-color, primary);
-    
+
     ul {
         list-style: none;
         padding: 0;
@@ -160,6 +161,30 @@
     }
 }
 
+// darkmode toggle button
+.dark-mode-toggle{
+
+    all: unset;
+    display: block;
+    height: 1.5em;
+    width: 1.5em;
+
+    &__enable-icon,
+    &__disable-icon{
+        height: 100%;
+        width: 100%;
+    }
+
+    &__enable-icon{
+        @include v.var(stroke, primary-light);
+    }
+    
+    &__disable-icon{
+        @include v.var(stroke, secondary-light);
+        display: none;
+    }
+}
+
 /*Mobile vertical*/
 @media #{v.$mq-mobile-vertical}{
     html{
@@ -170,11 +195,11 @@
         margin: 0 0 6rem;
     }
 
-    .navWrap{
+    .topBar{
         position: static;
     }
 
-    body .navWrap .mobileWrap {
+    body .topBar .mobileWrap {
         position: fixed;
         bottom: 0;
         left: 0;
@@ -208,7 +233,7 @@
         }
     }
 
-    body .navWrap .mobileWrap nav .hamburgerButton{
+    body .topBar .mobileWrap nav .hamburgerButton{
         display: flex;
     }
 
@@ -224,7 +249,7 @@
     }
 
     body{
-        .navWrap{
+        .topBar{
             font-size: 0.7em;
             display: flex;
             flex-wrap: wrap;

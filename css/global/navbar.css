@@ -2,15 +2,49 @@
 /* Usage: @include g.var(color, secondary); */
 :root {
   --primary: #183e60;
-  --prim-light: #48688e;
+  --on-primary: #fdcc1c;
+  --on-primary-2: rgba(253, 204, 28, 0.87);
+  --on-primary-disabled: rgba(253, 204, 28, 0.6);
+  --primary-light: #48688e;
+  --on-primary-light: #000000;
+  --on-primary-light-2: rgba(0, 0, 0, 0.87);
+  --on-primary-light-disabled: rgba(0, 0, 0, 0.6);
   --primary-dark: #001836;
+  --on-primary-dark: #ffffff;
+  --on-primary-dark-2: rgba(255, 255, 255, 0.87);
+  --on-primary-dark-disabled: rgba(255, 255, 255, 0.6);
   --secondary: #fdcc1c;
-  --secondary-lighl: #ffff5a;
+  --on-secondary: #000000;
+  --on-secondary-2: rgba(0, 0, 0, 0.87);
+  --on-secondary-disabled: rgba(0, 0, 0, 0.6);
+  --secondary-light: #ffff5a;
+  --on-secondary-light: #000000;
+  --on-secondary-light-2: rgba(0, 0, 0, 0.87);
+  --on-secondary-light-disabled: rgba(0, 0, 0, 0.6);
   --secondary-dark: #c59c00;
+  --on-secondary-dark: #000000;
+  --on-secondary-dark-2: rgba(0, 0, 0, 0.87);
+  --on-secondary-dark-disabled: rgba(0, 0, 0, 0.6);
   --surface: #ffffff;
   --on-surface: #000000;
+  --on-surface-2: rgba(0, 0, 0, 0.87);
+  --on-surface-disabled: rgba(0, 0, 0, 0.6);
   --background: #eaeaea;
-  --on-background: #ffffff;
+  --on-background: #000000;
+  --on-background-2: rgba(0, 0, 0, 0.87);
+  --on-background-disabled: rgba(0, 0, 0, 0.6);
+  --error: #CF6679;
+  --on-error: black;
+  --on-error-2: rgba(0, 0, 0, 0.87);
+  --on-error-disabled: rgba(0, 0, 0, 0.6);
+  --success: #4caf50;
+  --on-success: black;
+  --on-success-2: rgba(0, 0, 0, 0.87);
+  --on-success-disabled: rgba(0, 0, 0, 0.6);
+  --caution: #f9a825;
+  --on-caution: black;
+  --on-caution-2: rgba(0, 0, 0, 0.87);
+  --on-caution-disabled: rgba(0, 0, 0, 0.6);
   --black: #000000;
   --white: white;
   --snow: #fffafa;
@@ -24,36 +58,38 @@
 
     and (max-aspect-ratio: 1/1) -- just to see device rotation
 */
-.navWrap {
+.topBar {
   z-index: 1000;
   position: sticky;
   top: 0;
   width: 100vw;
+  height: 4em;
   display: flex;
   justify-content: space-around;
   align-items: center;
   overflow: hidden;
+  flex-wrap: nowrap;
   font-size: 1rem;
   background-color: #183e60;
   background-color: var(--primary);
   /* Here to hide horizontal scrollbar on mobile devices. */
 }
-.navWrap ul {
+.topBar ul {
   list-style: none;
   padding: 0;
 }
-.navWrap a {
+.topBar a {
   text-decoration: none;
 }
-.navWrap .logo {
+.topBar .logo {
   font-size: 2rem;
   text-align: center;
 }
-.navWrap .mobileWrap {
+.topBar .mobileWrap {
   z-index: 1000;
   min-width: 60%;
 }
-.navWrap nav {
+.topBar nav {
   width: 100%;
   height: 3em;
   display: flex;
@@ -63,10 +99,10 @@
   letter-spacing: 0.07em;
   /* just for mobile vertical */
 }
-.navWrap nav a {
+.topBar nav a {
   font-weight: 600;
 }
-.navWrap nav .navItem {
+.topBar nav .navItem {
   width: max-content;
   height: 100%;
   display: flex;
@@ -78,10 +114,10 @@
   color: #fdcc1c;
   color: var(--secondary);
 }
-.navWrap nav .navItem .navIcon {
+.topBar nav .navItem .navIcon {
   display: none;
 }
-.navWrap nav .hamburgerButton {
+.topBar nav .hamburgerButton {
   min-width: 25%;
   height: 100%;
   justify-content: center;
@@ -90,7 +126,7 @@
   float: left;
   display: none;
 }
-.navWrap nav .hamburgerButton .HBCheckboxLabel {
+.topBar nav .hamburgerButton .HBCheckboxLabel {
   height: 100%;
   width: 100%;
   display: flex;
@@ -99,35 +135,35 @@
   flex-direction: column;
   cursor: pointer;
 }
-.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe,
-.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:before,
-.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:after {
+.topBar nav .hamburgerButton .HBCheckboxLabel .HBStripe,
+.topBar nav .hamburgerButton .HBCheckboxLabel .HBStripe:before,
+.topBar nav .hamburgerButton .HBCheckboxLabel .HBStripe:after {
   background: black;
   height: 0.4em;
   width: 2.8em;
   border-radius: 0.2em;
   position: relative;
 }
-.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:before,
-.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:after {
+.topBar nav .hamburgerButton .HBCheckboxLabel .HBStripe:before,
+.topBar nav .hamburgerButton .HBCheckboxLabel .HBStripe:after {
   content: "";
   position: absolute;
 }
-.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:before {
+.topBar nav .hamburgerButton .HBCheckboxLabel .HBStripe:before {
   top: 0.65em;
 }
-.navWrap nav .hamburgerButton .HBCheckboxLabel .HBStripe:after {
+.topBar nav .hamburgerButton .HBCheckboxLabel .HBStripe:after {
   bottom: 0.65em;
 }
-.navWrap nav .hamburgerButton .HBStripes {
+.topBar nav .hamburgerButton .HBStripes {
   height: 3em;
   display: flex;
   align-items: center;
 }
-.navWrap .HBCheckbox {
+.topBar .HBCheckbox {
   display: none;
 }
-.navWrap .HBContent {
+.topBar .HBContent {
   z-index: 990;
   position: fixed;
   left: 0;
@@ -146,12 +182,32 @@
   color: #000000;
   color: var(--on-surface);
 }
-.navWrap .HBContent a {
-  color: #ffffff;
+.topBar .HBContent a {
+  color: #000000;
   color: var(--on-background);
 }
-.navWrap .HBContent ul {
+.topBar .HBContent ul {
   margin: 5rem 0 7rem 0;
+}
+
+.dark-mode-toggle {
+  all: unset;
+  display: block;
+  height: 1.5em;
+  width: 1.5em;
+}
+.dark-mode-toggle__enable-icon, .dark-mode-toggle__disable-icon {
+  height: 100%;
+  width: 100%;
+}
+.dark-mode-toggle__enable-icon {
+  stroke: #48688e;
+  stroke: var(--primary-light);
+}
+.dark-mode-toggle__disable-icon {
+  stroke: #ffff5a;
+  stroke: var(--secondary-light);
+  display: none;
 }
 
 /*Mobile vertical*/
@@ -164,11 +220,11 @@
     margin: 0 0 6rem;
   }
 
-  .navWrap {
+  .topBar {
     position: static;
   }
 
-  body .navWrap .mobileWrap {
+  body .topBar .mobileWrap {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -177,7 +233,7 @@
     background-color: #ffffff;
     background-color: var(--surface);
   }
-  body .navWrap .mobileWrap nav {
+  body .topBar .mobileWrap nav {
     font-size: 0.6rem;
     height: 6em;
     width: 90%;
@@ -186,17 +242,17 @@
     /* Center bottom mobile nav horizontally */
     margin: 0 auto;
   }
-  body .navWrap .mobileWrap nav a {
+  body .topBar .mobileWrap nav a {
     color: var(--blck);
   }
-  body .navWrap .mobileWrap nav .navItem {
+  body .topBar .mobileWrap nav .navItem {
     min-width: 25%;
   }
-  body .navWrap .mobileWrap nav .navItem .navIcon {
+  body .topBar .mobileWrap nav .navItem .navIcon {
     display: block;
   }
 
-  body .navWrap .mobileWrap nav .hamburgerButton {
+  body .topBar .mobileWrap nav .hamburgerButton {
     display: flex;
   }
 
@@ -210,14 +266,14 @@
     font-size: 4vmin;
   }
 
-  body .navWrap {
+  body .topBar {
     font-size: 0.7em;
     display: flex;
     flex-wrap: wrap;
     position: static;
     justify-content: space-evenly;
   }
-  body .navWrap .mobileWrap {
+  body .topBar .mobileWrap {
     max-width: 100%;
     display: flex;
     justify-content: center;
@@ -260,13 +316,13 @@
     }
     */
   }
-  body .navWrap .mobileWrap nav {
+  body .topBar .mobileWrap nav {
     font-size: 1.5em;
     overflow-x: auto;
     justify-content: flex-start;
     max-width: max-content;
   }
-  body .navWrap .mobileWrap nav .navItem {
+  body .topBar .mobileWrap nav .navItem {
     margin: 0 0.5em;
   }
 }
