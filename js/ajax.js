@@ -5,7 +5,7 @@ function ajax(url, method, callback, payload){
         if (this.readyState == 4) {
             if(this.status == 200){    
                 if(callback != ""){
-                    eval(callback + "(\'" + this.responseText + "\')");
+                    callback(this.responseText );
                 }else{
                     console.log(this.responseText);
                 }
