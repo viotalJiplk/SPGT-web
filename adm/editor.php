@@ -23,13 +23,16 @@
             <h1>lazy</h1>
             <p> dog</p>
         </div>
-        <textarea id=>
+        <textarea id="html">
         </textarea>
     </body>
 </html>
+<script>
+    document.getElementById("html").value = document.getElementsByClassName("contenteditable")[0].innerHTML;
+</script>
 <!--css should be done differently-->
 <style>
-    .contenteditable{
+    .contenteditable, #html{
         width: 99%;
         height: 800px;
         border: 1px #000000 solid;

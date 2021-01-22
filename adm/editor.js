@@ -24,26 +24,59 @@ function getselection(tag, on){
 
     for(i = 0; i< selection.rangeCount; i++){
         var range = selection.getRangeAt(i);
-
-        firstnode = range.startContainer;
-        endnode = range.endContainer;
+        var onew = 1;
+        if(range.startContainer != range.endContainer){
+            if (range.startContainer.nodeType != 1){
+                startContainer = range.startContainer.parentElement;
+            }else{
+                startContainer = range.startContainer;
+            }
+            if(range.endContainer.nodeType != 1){
+                endContainer = range.endContainer.parentElement;
+            }else{
+                endContainer = range.endContainer;
+            }
+            onew = 0;
+        }
 
         documentFragment = range.extractContents();
-        /*
-        code to manipulate selected elements (in documentFragment)
-        */
-        edit(documentFragment, tag, on);
+        if(documentFragment.firstChild != null){
+            //var firstchild_before = documentFragment.firstChild.cloneNode(false).outerHTML;
+
+            /*
+            code to manipulate selected elements (in documentFragment)
+            */
+            edit(documentFragment, tag, on);
 
         
-        /*
-        end of code to manipulate selected elements (in documentFragment)
-        */
-        //last node first
-        while(0 < documentFragment.childNodes.length){
-            range.insertNode(documentFragment.childNodes[documentFragment.childNodes.length - 1])                 
+            /*
+            end of code to manipulate selected elements (in documentFragment)
+            */
+            if(onew == 0){
+                if(startContainer.tagName == documentFragment.firstChild.tagName){
+                    move_childNodes(documentFragment.firstChild, startContainer);
+                    documentFragment.firstChild.remove();
+                }if(endContainer.tagName == documentFragment.lastChild.tagName){
+                    //move_childNodes(documentFragment.lastChild, endContainer);
+
+                    while(documentFragment.lastChild.lastChild != null){
+                        endContainer.insertBefore(documentFragment.lastChild.lastChild, endContainer.firstChild);
+                    }
+                    documentFragment.lastChild.remove();
+                }else{
+                    range.insertNode(documentFragment.childNodes[documentFragment.childNodes.length - 1])
+                }
+            }
+
+            //last node first
+            while(0 < documentFragment.childNodes.length){
+                range.insertNode(documentFragment.childNodes[documentFragment.childNodes.length - 1])                 
+            }
+
+            range.detach();
+            document.getElementById("html").value = document.getElementsByClassName("contenteditable")[0].innerHTML;
+            document.getElementsByClassName("contenteditable")[0].innerHTML = document.getElementsByClassName("contenteditable")[0].innerHTML.replaceAll(/(<[^<,/]*>)(<[^<]*>)*\s*(<\/[^<]*>)(<\/[^<]*>)*/gm, ""); //this should delete all empety tags
         }
-        range.detach();
-        //document.getElementsByClassName("contenteditable")[0].innerHTML = document.getElementsByClassName("contenteditable")[0].innerHTML.replaceAll(/(<[^<,/]*>)(<[^<]*>)*\s*(<\/[^<]*>)(<\/[^<]*>)*/gm, ""); //this should delete all empety tags
     }
 }
 
@@ -54,6 +87,17 @@ function getselection(tag, on){
  * @param {boolean} state - 0 = undotag, 0 != add tag
  */
 function edit(documentFragment, tag, state){
+    if(state != 0){
+        var j = null;
+        for(i = documentFragment.firstChild; i != null;){
+            j = i;
+            i = i.nextSibling;
+            if(j.nodeType == 3){
+                encalpsulatetag(j, tag);
+            }
+        }
+    }
+    
     tags[tag].replace_tags.forEach(function(replace_tag){
         if(state != 0){
             var tag_to_replace_selector = replace_tag;
@@ -72,17 +116,32 @@ function edit(documentFragment, tag, state){
 
             documentFragment.querySelectorAll(in_tag).forEach(tag_to_add => addtag(tag_to_add, tag));
         }else{
-            documentFragment.querySelectorAll(in_tag).forEach(in_tag =>in_tag.querySelectorAll(tag).forEach(tag => removetag(tag)));
+            documentFragment.querySelectorAll(tag).forEach(tag => removetag(tag));
+            //documentFragment.querySelectorAll(in_tag).forEach(in_tag =>in_tag.querySelectorAll(tag).forEach(tag => removetag(tag)));
         }
     });
+
+    if((tags[tag].type == "inline")&&(state == 0)){
+        var j = null;
+        var i = documentFragment.firstChild;
+        while(i != null){
+            j = i;
+            i = i.nextSibling;
+            if(j.nodeType == 1){
+                if(j.tagName == tag){
+                    encalpsulatetag(j, tags[tag].in_tags[0]);
+                }
+            }
+        }
+    }
 }
 
 /**
- * if adding a tag and first node or last node is textNode
+ * textnode to element
  * @param {Node} node - part of the document to edit.
  * @param {string} element_name - name of element from tags object (h1, b...).
  */
-function firstandlastnodeon(node, element_name){
+function textnode(node, element_name){
     if(node.firstChild.nodeType == 3){
         encalpsulatetag(node.firstChild, element_name);
     }
@@ -100,11 +159,20 @@ function firstandlastnodeon(node, element_name){
  */
 function replacetag(node, replace_element_name){
     var replace_element = document.createElement(replace_element_name);
-    while(node.firstChild != null){
-        replace_element.appendChild(node.firstChild);
-    }
+    move_childNodes(node, replace_element);
     node.parentNode.insertBefore(replace_element, node);
     node.remove();
+}
+
+/**
+ * moves child nodes from node to node
+ * @param {Node} old_node node from which should be childNodes taken from
+ * @param {Node} new_node node to which should be childNodes taken to
+ */
+function move_childNodes (old_node, new_node){
+    while(old_node.firstChild != null){
+        new_node.appendChild(old_node.firstChild);
+    }
 }
 
 /**
@@ -115,13 +183,7 @@ function replacetag(node, replace_element_name){
  */
 function addtag(node, add_element_name){
     var add_element = document.createElement(add_element_name);
-    while(node.firstChild != null){
-        add_element.appendChild(node.firstChild);
-    }
-/*    
-    node.childNodes.forEach(function(child){
-        add_element.appendChild(child.cloneNode();
-    });*/
+    move_childNodes(node, add_element);
     node.appendChild(add_element);
 }
 
@@ -132,7 +194,7 @@ function addtag(node, add_element_name){
  */
 function removetag(node){
     while(node.firstChild != null){
-        insertAfter(node.firstChild, node);
+        node.parentNode.insertBefore(node.firstChild, node);
     }
     node.remove();
 }
@@ -141,7 +203,7 @@ function removetag(node){
  * crates an element after a node and moves the element into node
  * @param {Node} node node which shuld be encapsulated
  * @param {string} add_element_name nodeName of the created element
- * @example <p></p> => <p><b></b></p>
+ * @example <b></b> => <p><b></b></p>
  */
 function encalpsulatetag(node, add_element_name){
     var add_element = document.createElement(add_element_name);
