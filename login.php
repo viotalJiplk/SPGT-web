@@ -11,7 +11,7 @@
                 if(array_key_exists(0, $sswordsearch)){
                     $sswordsearch = $sswordsearch[0]; 
                     if(array_key_exists("password", $sswordsearch)){
-                        $sswordsearch = $sswordsearch["password"];
+                        $sswordsearch = $sswordsearch->password;
                     }else{
                         throw new InputException("Wrong username or password");
                     }
@@ -21,6 +21,8 @@
                 $sswordtrue = password_verify($_POST["password"], $sswordsearch);
                 if($sswordtrue){
                     $_SESSION["username"] = $_POST["username"];
+                }else{
+                    throw new InputException("Wrong username or password");
                 }
             }
         }
