@@ -15,6 +15,6 @@ function callbackf(text){
 
 function fill(id){
     if(!(document.getElementById(id).getElementsByClassName("zasedaniCont")[0].hasChildNodes())){
-        ajax("/endpoints/zapisy.php","POST","callbackf","{\"id\":"+ id +"}");
+        ajax("/endpoints/zapisy.php","POST", callbackf,"{\"id\":"+ id +"}");
     }
 }

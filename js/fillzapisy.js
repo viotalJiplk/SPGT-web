@@ -20,4 +20,4 @@ function foreachzapis(record){
     root.appendChild(rec);
 }
 var nrecords = 100;
-ajax("/endpoints/zapisy.php","POST","callbackfall","{\"startdate\": \"2020-1-8\",\"nrecords\": " + nrecords + "}");
+ajax("/endpoints/zapisy.php","POST", callbackfall,"{\"startdate\": \"2020-1-8\",\"nrecords\": " + nrecords + "}");
