@@ -1,7 +1,8 @@
 <?php
     declare(strict_types = 1);
     session_start();
-    include_once("php/dbio.php");
+    include(dirname(__FILE__)."/.."."/php/dbio.php");                     //the location will be found even when this file (login.php) was included
+    include(dirname(__FILE__)."/.."."/php/classdef.php");
 
     try{
         if(!array_key_exists( "username" , $_SESSION)){
@@ -18,12 +19,15 @@
             }
         }
         if(array_key_exists( "username" , $_SESSION)){
-            header('Location: index.php', true, 302);
+            header('Location: /account/account.php', true, 302);
+            exit();
         }
     }catch(InputException $e){                                              //username not Unique
         $error = $e->getMessage();
     }catch(dbIOException $e){                                               //some db exception
         $error = "system exception";
+    }catch(Exception $e){
+        $error = "unknown exception";
     }
 ?>
 <!DOCTYPE html>
@@ -31,12 +35,12 @@
     <head>
         <meta charset="UTF-8">
         <title>SPGT-login</title>
-		<link rel="stylesheet" href="css/signup.css">
-        <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+		<link rel="stylesheet" href="/css/signup.css">
+        <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
     </head>
     <body>
 
-        <?php require 'include/nav.html';?>
+        <?php require "../".'include/nav.html';?>
 
         <div class="mainContent">
             <h3>Vytvořte si účet:</h3>
