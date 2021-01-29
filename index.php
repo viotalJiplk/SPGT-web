@@ -4,6 +4,7 @@
 		<meta charset="UTF-8"/>
 		<title>SPGT-Studentský parlament Gymnázia Tišnov</title>
 		<link rel="stylesheet" href="css/main_page.css">
+		<link rel="manifest" href="/manifest.webmanifest">
 		<link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
 	</head>
 	<body>
