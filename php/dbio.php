@@ -41,17 +41,11 @@ if(!function_exists("dbio")){
             if($e->errorInfo["1"] == 1062){                                     //username není unikátní
                 throw new InputException("Username not UNIQUE");
             }else{
-                $ExceptionHandler = new ExceptionHandlerclass;
-                $ExceptionHandler->SetException("PDOException", $e->getMessage());
                 throw new dbIOException("PDOexcepion");
             };
         }catch(AttrException $e){                                               //zpracování výjimky atributů spojení s databází 
-            $ExceptionHandler = new ExceptionHandlerclass;
-            $ExceptionHandler->SetException("PDOAtrException", $e);
             throw new dbIOException("exception when setting attribute");
-        }catch(Exception $e){                                                   //zpracování obecné výjimky
-            $ExceptionHandler = new ExceptionHandlerclass;
-            $ExceptionHandler->SetException("UnknownException", $e);
+        }catch(Exception $e){
             throw new dbIOException("db general excepion");
         }
     }
