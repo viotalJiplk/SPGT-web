@@ -52,7 +52,7 @@
         <div class="mainContent">
             <h3>Vytvořte si účet:</h3>
 
-            <form action="<?php echo $_SERVER['PHP_SELF'];?>" id="signup" method="post">
+            <form action="" id="signup" method="post">
                 <div>
                     <span>Uživatelské jméno:</span>
                     <input class="textInput" type="text" placeholder="jméno" name="username" required/>

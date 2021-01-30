@@ -25,7 +25,7 @@
         <div class="mainContent">
             <h3>Váš účet:</h3>
             <p>jméno: <?php echo $_SESSION["username"];?></p>
-            <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
+            <form action="" method="POST">
                 <h4>Změna hesla</h4>
                 <input type="text">
                 <button class="btn btn--confirm" type="submit">změna hesla</button>

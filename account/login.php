@@ -61,7 +61,7 @@
         <div class="mainContent">
             <h3>Přihlaste se:</h3>
 
-            <form action="<?php echo $_SERVER['PHP_SELF'];?>" id="login" method="post">
+            <form action="" id="login" method="post">
                 <div>
                     <span>Uživatelské jméno:</span>
                     <input class="textInput" type="text" placeholder="jméno" name="username" required/>
