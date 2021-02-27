@@ -74,8 +74,8 @@ function getselection(tag, on){
             }
 
             range.detach();
+            document.getElementsByClassName("contenteditable")[0].innerHTML = document.getElementsByClassName("contenteditable")[0].innerHTML.replaceAll(/(<[^<,\/]*>)(<[^<]*>)*\s*(<\/[^<]*>)(<\/[^<]*>)*/gm, ""); //this should delete all empety tags should be runed 
             document.getElementById("html").value = document.getElementsByClassName("contenteditable")[0].innerHTML;
-            document.getElementsByClassName("contenteditable")[0].innerHTML = document.getElementsByClassName("contenteditable")[0].innerHTML.replaceAll(/(<[^<,/]*>)(<[^<]*>)*\s*(<\/[^<]*>)(<\/[^<]*>)*/gm, ""); //this should delete all empety tags
         }
     }
 }
