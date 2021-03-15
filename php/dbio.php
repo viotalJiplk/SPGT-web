@@ -4,6 +4,13 @@ include(dirname(__FILE__)."/classdef.php");     //the location will be found eve
 
 
 if(!function_exists("dbio")){
+    /**
+     * function providing interface to database
+     *
+     * @param string $sql sql command
+     * @param array $param data for sql command
+     * @return array array of resultsyy
+     */
     function dbio(string $sql, array $param){
         try{
             $servername = "localhost";
