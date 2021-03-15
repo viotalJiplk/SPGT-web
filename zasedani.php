@@ -16,6 +16,15 @@
 <script src="js/fillzapisy.js"></script>
 <script src="js/getzapis.js"></script>
 <script>
+
+let datum = new Date();
+let payload = {
+    "startdate": datum.getUTCFullYear() + "-" + datum.getUTCMonth() + "-" + datum.getUTCDay(),
+    "nrecords": 100
+}
+
+fillzapis(payload);
+
  function push_zapis(json){
 	const obj = document.getElementById(json.id).getElementsByClassName("zasedaniCont")[0];
 	const hlasovani = json.hlasovani;

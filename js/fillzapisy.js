@@ -27,9 +27,16 @@ function foreachzapis(record){
     root.appendChild(rec);
 }
 
-let payload = {
-    "startdate": "2020-1-8",
-    "nrecords": 100
-}
+// let payload = {
+//     "startdate": "2020-1-8",
+//     "nrecords": 100
+// }
 
-ajax("/endpoints/zapisy.php","POST", callbackzapis_fill, JSON.stringify(payload));
+/**
+ * function to add records to webpages
+ * @param {Object} payload control structure
+ */
+
+function fillzapis(payload){
+    ajax("/endpoints/zapisy.php","POST", callbackzapis_fill, JSON.stringify(payload));
+}
