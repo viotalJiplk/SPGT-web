@@ -31,9 +31,14 @@
     	const rec = document.createElement("div");
     	rec.setAttribute("class", "zasedani");
     	rec.setAttribute("id", id);
-    	const result = "<input id=\"checkbox" + id + "\" class=\"checkbox\" type=\"checkbox\" onclick=\"fill("+ id +")\"><label for=\"checkbox"+ id +"\"><div class=\"zasedaniTopWrap\"><div class=\"zasedaniTop\"><span>Zasedání "+ time +"</span><div class=\"dropdownButtonWrap\"><div class=\"dropdownButton\"></div></div></div></div></label><div class=\"zasedaniCont\"></div><!--dyn from callbackf(text)--><!--dont add anything betwen <div></div>-->"
+    	const result = "<input id=\"checkbox" + id + "\" class=\"checkbox\" type=\"checkbox\" onclick=\"fill("+ id +")\"><label for=\"checkbox"+ id +"\"><div class=\"zasedaniTopWrap\"><div class=\"zasedaniTop\"><span>Zasedání "+ time +"</span><div class=\"dropdownButtonWrap\"><div class=\"dropdownButton\"></div></div></div></div></label><div class=\"zasedaniCont\"></div><!--dyn from callbackf(text)--><!--dont add anything betwen <div></div>--><div onclick=\"edit(" + id + ")\">edit</div>"
     	rec.innerHTML = result;
     	root.appendChild(rec);
+	}
+
+	function edit(id){
+		console.log(id);
+		location.href=encodeURI("editzapis.php?id=" + id);
 	}
 </script>
 <style>
